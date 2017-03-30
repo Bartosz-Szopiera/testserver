@@ -1,0 +1,28 @@
+* {
+  font-family: Courier, 'Courier New';
+}
+body {
+  padding: 0px 30px;
+  min-width: 600px;
+  width: 70%;
+  max-width: 800px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+table, td, th {
+  border: 1px solid black;
+}
+th:nth-of-type(1) {
+  width: 120px;
+}
+th:nth-of-type(2) {
+  width: 120px;
+}
+th:nth-of-type(3) {
+  width: 140px;
+}
+td, th {
+  padding: 5px;
+}
