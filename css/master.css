@@ -7,6 +7,11 @@ body {
   width: 70%;
   max-width: 800px;
 }
+div.wrapper1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 a {
   color: blue;
   text-decoration: none;

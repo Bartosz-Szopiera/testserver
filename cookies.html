@@ -5,8 +5,11 @@
     <title>Cookies Information</title>
     <link rel="stylesheet" href="/css/master.css">
   </head>
-  <body>
-    <h1>Cookies</h1>
+  <body onload="returnLink()">
+    <div class="wrapper1">
+      <h1>Cookies</h1>
+      <h4>Back to: <a id="returnLink" href="../">testserver.pl</a></h4>
+    </div>
     <h2>General Information</h2>
     <ol>
       <li>
@@ -64,4 +67,14 @@
       <li><a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_cookie">Wikipedia - HTTP cookie</a></li>
     </ul>
   </body>
+  <script type="text/javascript">
+    function returnLink(){
+      var referer = document.referrer;
+      var returnLink = document.getElementById('returnLink');
+      if (referer) {
+        returnLink.href = referer;
+        returnLink.innerHTML = referer;
+      }
+    }
+  </script>
 </html>
