@@ -3,16 +3,93 @@
   <head>
     <meta charset="utf-8">
     <title>testserver.pl</title>
+    <!-- EMPTY FAVICON -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="/css/master.css">
     <meta name="robots" content="noindex, nofollow">
+    <style></style>
   </head>
   <body>
-    <h1>testserver.pl</h1>
-    <h2>Pages served:</h2>
-    <ul>
-      <li><a href="orphans/">Orphans</a></li>
-      <li><a href="unity/">Unity 3D</a></li>
-    </ul>
-    <h5><a href="/cookies.html">Cookies policy</a></h5>
+    <div id="mainArea" class="mainArea">
+      <header id="header">
+        <div class="sectionTitle home text">Cześć, jestem Bartosz</div>
+        <div class="sectionTitle about text hidden">O mnie...</div>
+        <div class="sectionTitle projects text hidden">Projekty...</div>
+        <div class="sectionTitle contact text hidden">Kontakt...</div>
+        <nav id="headerNavigation" class="hidden">
+          <ul>
+            <li class="text">Home</li>
+            <li class="text">O mnie</li>
+            <li class="text">Projekty</li>
+            <li calss="text">Kontakt</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!--===== CONTROLS =====-->
+        <div id="arrows" class="arrows"></div>
+        <!--===== HOME SCREEN NAVIGATION =====-->
+        <nav id="homeNavigation" class="">
+          <ul>
+            <li class="about">O mnie</li>
+            <li class="projects">Projekty</li>
+            <li class="contact">Kontakt</li>
+          </ul>
+        </nav>
+        <!--===== CONTENT =====-->
+        <div class="articleWrapper about hidden">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <div class="subject text"></div>
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#home-1"></a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="about">
+            <section id="about-1">
+              <div class="content">
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
+        <!--===== CONTACT FORM =====  -->
+        <div id="contact" class="articleWrapper">
+          <article class="contact">
+            <!-- FORM -->
+            <div class="form">
+              <form id="contactForm" method="post"></form>
+
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <div id="sidebar" class="sidebar">
+      <div id="languageList" class="languageList">
+        <ul>
+          <li>EN</li>
+          <li>PL</li>
+        </ul>
+      </div>
+      <nav id="sidebarNavigation">
+        <ul>
+          <li class="text">Home</li>
+          <li class="text">O mnie</li>
+          <li class="text">Projekty</li>
+          <li calss="text">Kontakt</li>
+        </ul>
+      </nav>
+      <div id="sidebarLinks" class="links">
+        <a class="facebook" href="#"></a>
+        <a class="github" href="#"></a>
+      </div>
+    </div>
   </body>
 </html>
