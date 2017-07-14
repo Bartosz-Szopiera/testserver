@@ -4,6 +4,7 @@ var arrows = document.querySelector('#arrows');
 var main = document.querySelector('main');
 var navigation = document.querySelectorAll('nav li');
 var arrows = document.querySelector('#arrows').children;
+var artWrappers = document.querySelectorAll('.articleWrapper');
 
 // =========EVENTS==============
 
@@ -50,7 +51,7 @@ function navigate(direction, target) {
 
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
-  if (nA === null) return
+  if (nA === null) return // When newIndex excides existing articles
 
   selector = '.articleWrapper[data-article-index="'+ currentIndex +'"]';
   var cA = document.querySelector(selector);
@@ -58,6 +59,12 @@ function navigate(direction, target) {
   nA.classList.remove('hidden');
 
   var delay = 0.35;
+
+  // Normalize currentIndex when navigating from child-articles to
+  // parent level articles
+  if(currentIndex/100 > 1 && newIndex/100 < 1) {
+    currentIndex = Math.floor(currentIndex/100);
+  }
 
   if (newIndex < currentIndex) {
     cA.style.transition = 'unset';
@@ -94,6 +101,7 @@ function navigate(direction, target) {
     },delay*1000);
   }
 
+  // if (newIndex%100 === 0) newIndex /= 100
   currentIndex = newIndex;
 }
 // =============================
