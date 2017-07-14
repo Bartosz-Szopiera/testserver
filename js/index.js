@@ -62,11 +62,11 @@ function navigate(direction, target) {
 
   // Normalize currentIndex when navigating from child-articles to
   // parent level articles
-  if(currentIndex/100 > 1 && newIndex/100 < 1) {
+  if(currentIndex > 100 && newIndex < 100) {
     currentIndex = Math.floor(currentIndex/100);
   }
 
-  if (newIndex < currentIndex) {
+  if (newIndex < currentIndex || newIndex === currentIndex) {
     cA.style.transition = 'unset';
     nA.style.transition = 'unset';
     cA.style.transform = 'translate(-100%,0px)';
@@ -101,7 +101,7 @@ function navigate(direction, target) {
     },delay*1000);
   }
 
-  // if (newIndex%100 === 0) newIndex /= 100
+  if (newIndex%100 === 0) newIndex /= 100
   currentIndex = newIndex;
 }
 // =============================
