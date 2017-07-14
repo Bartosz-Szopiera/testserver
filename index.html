@@ -10,40 +10,159 @@
     <style></style>
   </head>
   <body>
-    <div id="mainArea" class="mainArea">
-      <header id="header">
-        <div class="sectionTitle home text">Cześć, jestem Bartosz</div>
-        <div class="sectionTitle about text hidden">O mnie...</div>
-        <div class="sectionTitle projects text hidden">Projekty...</div>
-        <div class="sectionTitle contact text hidden">Kontakt...</div>
-        <nav id="headerNavigation" class="hidden">
+    <div id="header">
+      <header>
+        <div class="articleTitle start text">
+          <h1>Bartosz Szopiera | Web-Dev Portfolio</h1>
+        </div>
+        <div class="articleTitle about text hidden">O mnie...</div>
+        <div class="articleTitle projects text hidden">Projekty...</div>
+        <div class="articleTitle contact text hidden">Kontakt...</div>
+        <!-- <nav id="headerNavigation" class="hidden">
           <ul>
-            <li class="text">Home</li>
+            <li class="text">Start</li>
             <li class="text">O mnie</li>
             <li class="text">Projekty</li>
             <li calss="text">Kontakt</li>
           </ul>
-        </nav>
+        </nav> -->
       </header>
+    </div>
+    <div id="main" class="mainArea">
+      <!--===== CONTROLS =====-->
+      <div id="arrows" class="arrows">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
       <main>
-        <!--===== CONTROLS =====-->
-        <div id="arrows" class="arrows"></div>
         <!--===== HOME SCREEN NAVIGATION =====-->
-        <nav id="homeNavigation" class="">
-          <ul>
-            <li class="about">O mnie</li>
-            <li class="projects">Projekty</li>
-            <li class="contact">Kontakt</li>
-          </ul>
-        </nav>
+        <div class="articleWrapper start" data-article-index="0">
+          <nav id="startNavigation" class="start">
+            <ul>
+              <li class="about" data-article-index="1">O mnie</li>
+              <li class="projects" data-article-index="2">Projekty</li>
+              <li class="contact" data-article-index="3">Kontakt</li>
+            </ul>
+          </nav>
+        </div>
         <!--===== CONTENT =====-->
-        <div class="articleWrapper about hidden">
+        <div class="articleWrapper about hidden" data-article-index="1">
           <!-- BASIC CONTENT INFO -->
           <header>
             <div class="subject text"></div>
             <div class="tableOfContents">
               <ul>
-                <li><a class="text" href="#home-1"></a></li>
+                <li><a class="text" href="#about-1">Opis</a></li>
+                <li><a class="text" href="#about-2">Co się udało</a></li>
+                <li><a class="text" href="#about-3">Co można poprawić</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="about">
+            <section id="about-1">
+              <div class="content">
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
+        <div class="articleWrapper projects hidden" data-article-index="2">
+          <!--===== PROJECTS NAVIGATION =====-->
+          <nav id="projectsNavigation" class="start">
+            <ul>
+              <li class="about" data-article-index="201">Orphans</li>
+              <li class="projects" data-article-index="202">Unity3D</li>
+              <li class="contact" data-article-index="203">Exploder</li>
+              <li class="contact" data-article-index="204">This Site</li>
+            </ul>
+          </nav>
+        </div>
+        <!--===== PROJECTS =====  -->
+        <div class="articleWrapper about hidden" data-article-index="201">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <div class="subject text"></div>
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#about-1">Opis</a></li>
+                <li><a class="text" href="#about-2">Co się udało</a></li>
+                <li><a class="text" href="#about-3">Co można poprawić</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="about">
+            <section id="about-1">
+              <div class="content">
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
+        <div class="articleWrapper about hidden" data-article-index="202">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <div class="subject text"></div>
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#about-1">Opis</a></li>
+                <li><a class="text" href="#about-2">Co się udało</a></li>
+                <li><a class="text" href="#about-3">Co można poprawić</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="about">
+            <section id="about-1">
+              <div class="content">
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
+        <div class="articleWrapper about hidden" data-article-index="203">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <div class="subject text"></div>
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#about-1">Opis</a></li>
+                <li><a class="text" href="#about-2">Co się udało</a></li>
+                <li><a class="text" href="#about-3">Co można poprawić</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="about">
+            <section id="about-1">
+              <div class="content">
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
+        <div class="articleWrapper about hidden" data-article-index="204">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <div class="subject text"></div>
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#about-1">Opis</a></li>
+                <li><a class="text" href="#about-2">Co się udało</a></li>
+                <li><a class="text" href="#about-3">Co można poprawić</a></li>
               </ul>
             </div>
           </header>
@@ -60,7 +179,7 @@
           </footer>
         </div>
         <!--===== CONTACT FORM =====  -->
-        <div id="contact" class="articleWrapper">
+        <div id="contact" class="articleWrapper hidden" data-article-index="3">
           <article class="contact">
             <!-- FORM -->
             <div class="form">
@@ -71,7 +190,7 @@
         </div>
       </main>
     </div>
-    <div id="sidebar" class="sidebar">
+    <div id="sidebar" class="sidebar side">
       <div id="languageList" class="languageList">
         <ul>
           <li>EN</li>
@@ -80,16 +199,17 @@
       </div>
       <nav id="sidebarNavigation">
         <ul>
-          <li class="text">Home</li>
-          <li class="text">O mnie</li>
-          <li class="text">Projekty</li>
-          <li calss="text">Kontakt</li>
+          <li class="text" data-article-index="0">Start</li>
+          <li class="text" data-article-index="1">O mnie</li>
+          <li class="text" data-article-index="2">Projekty</li>
+          <li calss="text" data-article-index="3">Kontakt</li>
         </ul>
       </nav>
       <div id="sidebarLinks" class="links">
-        <a class="facebook" href="#"></a>
-        <a class="github" href="#"></a>
+        <a class="facebook" href="#">FB</a>
+        <a class="github" href="#">GH</a>
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="js/index.js"></script>
 </html>
