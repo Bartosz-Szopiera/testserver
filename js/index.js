@@ -33,7 +33,8 @@ var styleSheet = document.querySelector('style').sheet;
     var artIndex = main.dataset.currentIndex;
     var selector = 'li p[data-article-index="' + artIndex + '"]';
     if (styleSheet.cssRules.length !== 0) styleSheet.deleteRule(0);
-    var rule = selector + '{font-size: 1.25em;}';
+    var style = '{font-size: 1.25em; color: black;text-decoration:underline}'
+    var rule = selector + style;
     styleSheet.insertRule(rule, 0);
   };
   handler();
@@ -72,13 +73,25 @@ function navigate(direction, target) {
 
   direction = typeof(direction) === 'number' ? direction : 0;
   if (direction !== 0)  {
-    var newIndex = artList[artList.indexOf(currentIndex) + direction];
+    if (artList.slice(-1)[0] === currentIndex && direction===1) {
+      var newIndex = artList[0];
+    }
+    else if (artList[0] === currentIndex && direction===-1) {
+      var newIndex = artList[artList.length-1];
+    }
+    else {
+      var newIndex = artList[artList.indexOf(currentIndex) + direction];
+    }
   }
   else {
     var newIndex = parseInt(target.dataset.articleIndex);
+    if (currentIndex === newIndex) return
+    if (artList.indexOf(newIndex) < artList.indexOf(currentIndex)) {
+      direction = -1;
+    }
+    else direction = 1
   }
 
-  if (currentIndex === newIndex) return
 
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
@@ -87,11 +100,15 @@ function navigate(direction, target) {
   selector = '.articleWrapper[data-article-index="'+ currentIndex +'"]';
   var cA = document.querySelector(selector);
 
+  var order = direction === 1 ? 1000 : 0;
+  nA.style.order = order;
+  cA.style.order = 1000 - order;
+
   nA.classList.remove('hidden');
 
   var delay = 0.35;
 
-  if (artList.indexOf(newIndex) < artList.indexOf(currentIndex)) {
+  if (direction === -1) {
     cA.style.transition = 'unset';
     nA.style.transition = 'unset';
     cA.style.transform = 'translate(-100%,0px)';
