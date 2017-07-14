@@ -33,9 +33,18 @@ function articleObserver() {
 // =============================
 // currentIndex - index of curently displayed article
 // newIndex = index of article to be displayed
+// cA - current article (it has currentIndex)
+// nA - new article (it has newIndex)
 var sTiD = 0; // setTimout ID
 var try_sTiD = 0; // setTimout ID for secondary attempts
 var currentIndex = 0;
+var artList = function(){
+  var ar = [];
+  for (var i = 0; i < artWrappers.length; i++) {
+    ar.push(parseInt(artWrappers[i].dataset.articleIndex));
+  }
+  return ar
+}();
 
 function navigate(direction, target) {
   console.log('navigate');
@@ -50,13 +59,14 @@ function navigate(direction, target) {
   }
 
   direction = typeof(direction) === 'number' ? direction : 0;
-  if (direction !== 0) var newIndex = currentIndex + direction;
+  if (direction !== 0)  {
+    var newIndex = artList[artList.indexOf(currentIndex) + direction];
+  }
   else {
     var newIndex = parseInt(target.dataset.articleIndex);
   }
 
   if (currentIndex === newIndex) return
-  if (newIndex%100 === 0) newIndex /= 100
 
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
@@ -69,13 +79,7 @@ function navigate(direction, target) {
 
   var delay = 0.35;
 
-  // Normalize currentIndex when navigating from child-articles to
-  // parent level articles
-  if(currentIndex > 100 && newIndex < 100) {
-    currentIndex = Math.floor(currentIndex/100);
-  }
-
-  if (newIndex < currentIndex || newIndex === currentIndex) {
+  if (artList.indexOf(newIndex) < artList.indexOf(currentIndex)) {
     cA.style.transition = 'unset';
     nA.style.transition = 'unset';
     cA.style.transform = 'translate(-100%,0px)';
