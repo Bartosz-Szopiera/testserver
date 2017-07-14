@@ -50,12 +50,14 @@ function navigate(direction, target) {
 
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
+  if (nA === null) return
+
   selector = '.articleWrapper[data-article-index="'+ currentIndex +'"]';
   var cA = document.querySelector(selector);
 
   nA.classList.remove('hidden');
 
-  var delay = 0.45;
+  var delay = 0.35;
 
   if (newIndex < currentIndex) {
     cA.style.transition = 'unset';
@@ -71,7 +73,7 @@ function navigate(direction, target) {
         cA.style.transition = 'unset';
         nA.style.transition = 'unset';
         cA.classList.add('hidden');
-        sTiD = 0;
+        setTimeout(function(){sTiD = 0;},50);
       }, delay*1000);
     });
   }
@@ -88,7 +90,7 @@ function navigate(direction, target) {
       cA.style.transform = 'translate(0%,0px)';
       nA.style.transform = 'translate(0%,0px)';
       cA.classList.add('hidden');
-      sTiD = 0;
+      setTimeout(function(){sTiD = 0;},50);
     },delay*1000);
   }
 
