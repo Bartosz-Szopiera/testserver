@@ -2,7 +2,7 @@
 var sideNav = document.querySelector('#sidebarNavigation');
 var arrows = document.querySelector('#arrows');
 var main = document.querySelector('main');
-var navigation = document.querySelectorAll('nav li');
+var navigation = document.querySelectorAll('nav li p');
 var arrows = document.querySelector('#arrows').children;
 var artWrappers = document.querySelectorAll('.articleWrapper');
 
@@ -23,6 +23,14 @@ var events = function (){
 }();
 
 // =============================
+// Observe current article and update lists
+// and subheadings accordingly
+function articleObserver() {
+
+}
+
+
+// =============================
 // currentIndex - index of curently displayed article
 // newIndex = index of article to be displayed
 var sTiD = 0; // setTimout ID
@@ -30,7 +38,7 @@ var try_sTiD = 0; // setTimout ID for secondary attempts
 var currentIndex = 0;
 
 function navigate(direction, target) {
-
+  console.log('navigate');
   if (target === undefined) target = this
 
   if (sTiD !== 0) {
@@ -103,5 +111,6 @@ function navigate(direction, target) {
   }
 
   currentIndex = newIndex;
+  document.querySelector('main').dataset.currentIndex = currentIndex;
 }
 // =============================

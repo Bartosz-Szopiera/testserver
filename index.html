@@ -28,7 +28,7 @@
         </nav> -->
       </header>
     </div>
-    <div id="main" class="mainArea">
+    <div id="main" class="mainArea" data-current-index="0">
       <!--===== CONTROLS =====-->
       <div id="arrows" class="arrows">
         <div class="left"></div>
@@ -39,9 +39,9 @@
         <div class="articleWrapper start" data-article-index="0">
           <nav id="startNavigation" class="start">
             <ul>
-              <li class="about" data-article-index="1">O mnie</li>
-              <li class="projects" data-article-index="2">Projekty</li>
-              <li class="contact" data-article-index="3">Kontakt</li>
+              <li class="about"><p data-article-index="1">O mnie</p></li>
+              <li class="projects"><p data-article-index="2">Projekty</p></li>
+              <li class="contact"><p data-article-index="3">Kontakt</p></li>
             </ul>
           </nav>
         </div>
@@ -74,10 +74,10 @@
           <!--===== PROJECTS NAVIGATION =====-->
           <nav id="projectsNavigation" class="start">
             <ul>
-              <li class="about" data-article-index="201">Orphans</li>
-              <li class="projects" data-article-index="202">Unity3D</li>
-              <li class="contact" data-article-index="203">Exploder</li>
-              <li class="contact" data-article-index="204">This Site</li>
+              <li class="about"><p data-article-index="201">Orphans</p></li>
+              <li class="projects"><p data-article-index="202">Unity3D</p></li>
+              <li class="contact"><p data-article-index="203">Exploder</p></li>
+              <li class="contact"><p data-article-index="204">This Site</p></li>
             </ul>
           </nav>
         </div>
@@ -193,16 +193,23 @@
     <div id="sidebar" class="sidebar side">
       <div id="languageList" class="languageList">
         <ul>
-          <li>EN</li>
-          <li>PL</li>
+          <li><p>EN</p></li>
+          <li><p>PL</p></li>
         </ul>
       </div>
       <nav id="sidebarNavigation">
         <ul>
-          <li class="text" data-article-index="0">Start</li>
-          <li class="text" data-article-index="1">O mnie</li>
-          <li class="text" data-article-index="2">Projekty</li>
-          <li calss="text" data-article-index="3">Kontakt</li>
+          <li class="text"><p data-article-index="0">Start</p></li>
+          <li class="text"><p data-article-index="1">O mnie</p></li>
+          <li class="text"><p data-article-index="2">Projekty</p>
+            <ul>
+              <li class="text"><p data-article-index="201">Orphans</p></li>
+              <li class="text"><p data-article-index="202">Unity3D</p></li>
+              <li class="text"><p data-article-index="203">Exploder</p></li>
+              <li class="text"><p data-article-index="204">This Site</p></li>
+            </ul>
+          </li>
+          <li calss="text"><p data-article-index="3">Kontakt</p></li>
         </ul>
       </nav>
       <div id="sidebarLinks" class="links">

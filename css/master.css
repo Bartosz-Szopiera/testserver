@@ -20,6 +20,13 @@ nav {
   font-size: 1.25em; }
   nav li:hover {
     cursor: pointer; }
+  nav li li {
+    padding-left: 10px;
+    font-size: 0.9em; }
+
+li > p {
+  display: inline-block;
+  margin: 0px; }
 
 body {
   position: relative;

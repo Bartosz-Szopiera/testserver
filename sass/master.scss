@@ -32,6 +32,15 @@ nav {
   & li:hover {
     cursor: pointer;
   }
+  & li li {
+    padding-left: 10px;
+    font-size: 0.9em;
+  }
+}
+
+li>p {
+  display: inline-block;
+  margin: 0px;
 }
 
 body {
