@@ -1,8 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter");
 .hidden {
   display: none; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px; }
+
+a {
+  text-decoration: none; }
+  a:visited {
+    color: inherit; }
+  a:link {
+    color: inherit; }
 
 ul {
   padding: 0px;
@@ -10,14 +22,10 @@ ul {
   ul li {
     list-style: none; }
 
-.links a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid; }
-
 nav {
-  font-size: 1.25em; }
+  font-size: 1.35em; }
+  nav li {
+    height: auto; }
   nav li:hover {
     cursor: pointer; }
   nav li li {
@@ -26,7 +34,12 @@ nav {
 
 li > p {
   display: inline-block;
-  margin: 0px; }
+  margin: 0px;
+  vertical-align: top;
+  height: 38px;
+  transition: font-size 0.2s; }
+  li > p:hover {
+    font-size: 1.25em; }
 
 body {
   position: relative;
@@ -37,26 +50,33 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
-  align-content: flex-start; }
+  align-content: flex-start;
+  overflow: hidden; }
   body > * {
     box-sizing: border-box;
     flex: 0 0 auto;
     height: 100%; }
 
 #header {
-  border: 1px solid;
-  width: 80%;
-  min-height: 90px;
-  height: 15%;
-  order: 1;
-  display: flex;
-  align-items: center; }
+  background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
+  padding: 0px 30px;
+  width: 85%;
+  min-height: 55px;
+  height: 10%;
+  order: 1; }
   #header header {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 100%; }
-    #header header .articleTitle {
-      text-align: center;
-      font-size: 1em;
-      margin: 5px 10px; }
+    #header header h1 {
+      font-size: 2em;
+      margin: 0px; }
+      #header header h1 span {
+        font-size: 0.6em; }
 
 #headerNavigation {
   display: inline-block;
@@ -70,11 +90,10 @@ body {
 
 #main {
   position: relative;
-  border: 1px solid;
-  width: 80%;
+  width: 85%;
   height: auto;
   flex: 1 1 auto;
-  order: 2;
+  order: 3;
   overflow: hidden; }
   #main main {
     position: absolute;
@@ -88,17 +107,12 @@ body {
       height: 100%;
       width: 100%;
       transform: translate(0px, 0px); }
-      #main main > .articleWrapper:nth-of-type(odd) {
-        background: #82adda; }
-      #main main > .articleWrapper:nth-of-type(even) {
-        background: #bdcd7e; }
 
 #arrows {
   z-index: 2;
   width: 100%;
   top: 50%;
   height: 0px;
-  border-top: 1px solid;
   position: absolute;
   display: flex;
   flex-flow: row nowrap;
@@ -113,54 +127,134 @@ body {
     #arrows .left:hover, #arrows .right:hover {
       cursor: pointer; }
 
-.articleWrapper nav {
-  text-align: center;
-  height: 100%; }
-  .articleWrapper nav ul {
+.articleWrapper {
+  padding: 40px;
+  padding-top: 15px; }
+  .articleWrapper nav {
+    text-align: center;
     height: 100%; }
-    .articleWrapper nav ul li {
-      height: 33%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 0 0 auto; }
-  .articleWrapper nav#startNavigation li {
-    height: 33%; }
-  .articleWrapper nav#projectsNavigation li {
-    height: 25%; }
+    .articleWrapper nav ul {
+      height: 100%; }
+      .articleWrapper nav ul li {
+        height: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto; }
+    .articleWrapper nav#startNavigation li {
+      height: 33%; }
+    .articleWrapper nav#projectsNavigation li {
+      height: 25%; }
+
+.articleWrapper .tableOfContents li {
+  display: inline; }
+  .articleWrapper .tableOfContents li:not(:first-of-type) {
+    padding-left: 15px; }
+  .articleWrapper .tableOfContents li::before {
+    content: '#'; }
+.articleWrapper article .content {
+  font-size: 1.15em; }
 
 #sidebar {
+  background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
-  border: 1px solid;
-  width: 20%;
-  padding-left: 40px;
+  width: 15%;
+  padding-left: 30px;
   flex: 0 0 auto;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  order: 0; }
   #sidebar > * {
     width: 100%;
     flex: 0 1 auto;
-    margin: 20px 0px; }
+    margin: 10px 0px; }
+
+body.noSidebar #header, body.noSidebar #main, body.noSidebar #sidebar {
+  width: 100%; }
+body.noSidebar #header {
+  height: 60px; }
+  body.noSidebar #header header {
+    height: 100%;
+    justify-content: left;
+    flex-flow: row nowrap;
+    align-items: center; }
+body.noSidebar #sidebar {
+  order: 2;
+  padding: 0px;
+  display: block;
+  width: 100%;
+  height: 40px; }
+  body.noSidebar #sidebar > * {
+    width: auto;
+    height: auto;
+    margin: 15px; }
+  body.noSidebar #sidebar ul {
+    display: inline-flex;
+    flex-flow: row nowrap; }
+  body.noSidebar #sidebar #sidebarNavigation {
+    float: left;
+    margin: 0px;
+    margin-left: 20px; }
+    body.noSidebar #sidebar #sidebarNavigation li {
+      display: inline;
+      padding-left: 10px;
+      margin: 0px; }
+      body.noSidebar #sidebar #sidebarNavigation li li {
+        padding-top: 10px; }
+      body.noSidebar #sidebar #sidebarNavigation li:not(:first-of-type)::before {
+        content: '/ ';
+        display: inline;
+        vertical-align: top; }
+  body.noSidebar #sidebar #languageList {
+    position: fixed;
+    top: 0px;
+    right: 0px; }
+  body.noSidebar #sidebar #sidebarLinks {
+    position: absolute;
+    top: 0px;
+    right: 125px; }
+    body.noSidebar #sidebar #sidebarLinks > * {
+      display: inline-block; }
 
 #languageList {
-  height: 10%; }
+  height: 5%;
+  order: 1;
+  font-size: 1.35em; }
   #languageList li {
     display: inline; }
+    #languageList li p:hover {
+      cursor: pointer; }
     #languageList li:nth-of-type(even)::before {
       content: '/ ';
       display: inline; }
 
 #sidebarNavigation {
-  height: 70%; }
+  order: 2;
+  height: 80%; }
   #sidebarNavigation ul {
     padding: 0px; }
     #sidebarNavigation ul li {
+      margin: 10px 0px;
       display: block;
       list-style: none; }
 
 #sidebarLinks {
+  order: 3;
   height: 15%;
-  align-self: flex-end; }
+  text-align: center; }
+  #sidebarLinks a {
+    display: block;
+    width: 30px;
+    font-size: 1.35em;
+    line-height: 0px;
+    padding: 15px 0px;
+    margin-bottom: 15px; }
+  #sidebarLinks .facebook {
+    font-weight: bold;
+    background: black;
+    color: white; }
+  #sidebarLinks .github {
+    font-weight: bold; }
 
 /*# sourceMappingURL=master.css.map */
