@@ -5,10 +5,11 @@ var main = document.querySelector('main');
 var navigation = document.querySelectorAll('nav li p');
 var arrows = document.querySelector('#arrows').children;
 var artWrappers = document.querySelectorAll('.articleWrapper');
+var styleSheet = document.querySelector('style').sheet;
 
 // =========EVENTS==============
 
-var events = function (){
+(function events(){
   // Site navigation
   for (var i = 0; i < navigation.length; i++) {
     navigation[i].addEventListener('click', navigate);
@@ -20,14 +21,26 @@ var events = function (){
   arrows[1].addEventListener('click', function(){
     navigate(1)
   });
-}();
+})();
 
 // =============================
 // Observe current article and update lists
 // and subheadings accordingly
-function articleObserver() {
-
-}
+(function articleObserver() {
+  var observer = new MutationObserver(handler);
+  function handler(){
+    var main = document.querySelector('main');
+    var artIndex = main.dataset.currentIndex;
+    var selector = 'li p[data-article-index="' + artIndex + '"]';
+    if (styleSheet.cssRules.length !== 0) styleSheet.deleteRule(0);
+    var rule = selector + '{font-size: 1.25em;}';
+    styleSheet.insertRule(rule, 0);
+  };
+  handler();
+  var target = document.querySelector('main');
+  var config = {attributes: true,};
+  observer.observe(target, config);
+})();
 
 
 // =============================
@@ -47,7 +60,6 @@ var artList = function(){
 }();
 
 function navigate(direction, target) {
-  console.log('navigate');
   if (target === undefined) target = this
 
   if (sTiD !== 0) {
