@@ -48,6 +48,7 @@ function navigate(direction, target) {
   }
 
   if (currentIndex === newIndex) return
+  if (newIndex%100 === 0) newIndex /= 100
 
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
@@ -101,7 +102,6 @@ function navigate(direction, target) {
     },delay*1000);
   }
 
-  if (newIndex%100 === 0) newIndex /= 100
   currentIndex = newIndex;
 }
 // =============================
