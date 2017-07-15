@@ -204,6 +204,8 @@ body.noSidebar #sidebar {
       display: inline;
       padding-left: 10px;
       margin: 0px; }
+      body.noSidebar #sidebar #sidebarNavigation li:nth-of-type(3) p {
+        vertical-align: super; }
       body.noSidebar #sidebar #sidebarNavigation li p {
         line-height: 0px;
         height: 0px;
