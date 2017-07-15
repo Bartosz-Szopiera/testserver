@@ -142,9 +142,11 @@ body {
         align-items: center;
         flex: 0 0 auto; }
     .articleWrapper nav#startNavigation li {
-      height: 33%; }
+      height: 33%;
+      font-size: 1.5em; }
     .articleWrapper nav#projectsNavigation li {
-      height: 25%; }
+      height: 25%;
+      font-size: 1.5em; }
 
 .articleWrapper .tableOfContents li {
   display: inline; }
@@ -193,13 +195,20 @@ body.noSidebar #sidebar {
     display: inline-flex;
     flex-flow: row nowrap; }
   body.noSidebar #sidebar #sidebarNavigation {
+    height: 40px;
     float: left;
     margin: 0px;
     margin-left: 20px; }
     body.noSidebar #sidebar #sidebarNavigation li {
+      height: 100%;
       display: inline;
       padding-left: 10px;
       margin: 0px; }
+      body.noSidebar #sidebar #sidebarNavigation li p {
+        line-height: 0px;
+        height: 0px;
+        padding: 0.5em 0px;
+        vertical-align: baseline; }
       body.noSidebar #sidebar #sidebarNavigation li li {
         padding-top: 10px; }
       body.noSidebar #sidebar #sidebarNavigation li:not(:first-of-type)::before {
@@ -209,11 +218,11 @@ body.noSidebar #sidebar {
   body.noSidebar #sidebar #languageList {
     position: fixed;
     top: 0px;
-    right: 0px; }
+    right: 15px; }
   body.noSidebar #sidebar #sidebarLinks {
     position: absolute;
     top: 0px;
-    right: 125px; }
+    right: 145px; }
     body.noSidebar #sidebar #sidebarLinks > * {
       display: inline-block; }
 

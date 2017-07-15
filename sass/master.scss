@@ -193,15 +193,14 @@ body {
     }
     &#startNavigation li{
       height: 33%;
+      font-size: 1.5em;
     }
     &#projectsNavigation li{
       height: 25%;
+      font-size: 1.5em;
     }
   }
 }
-
-// ----- Projects Navigation -----
-
 
 // ===== ARTICLE =====
 // ----- Header -----
@@ -231,7 +230,6 @@ body {
 #sidebar {
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
-  // border: 1px solid;
   width: 15%;
   padding-left: 30px;
   flex: 0 0 auto;
@@ -279,13 +277,21 @@ body.noSidebar {
       flex-flow: row nowrap;
     }
     & #sidebarNavigation {
+      height: 40px;
       float: left;
       margin: 0px;
       margin-left: 20px;
       & li {
+        height: 100%;
         display: inline;
         padding-left: 10px;
         margin: 0px;
+        & p {
+          line-height: 0px;
+          height: 0px;
+          padding: 0.5em 0px;
+          vertical-align: baseline;
+        }
         & li {
           padding-top: 10px;
         }
@@ -299,12 +305,12 @@ body.noSidebar {
     & #languageList {
       position: fixed;
       top: 0px;
-      right: 0px;
+      right: 15px;
     }
     & #sidebarLinks {
-      // float: right;
       position: absolute;
-      top: 0px; right: 125px;
+      top: 0px;
+      right: 145px;
       &>*{
         display: inline-block;
       }
