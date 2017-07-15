@@ -4,4 +4,4 @@ mysqli_connect.php
 css/master.css.map
 .sass-cache
 sessionNotes.txt
-asset-local-only
+assets-local
