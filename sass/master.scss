@@ -153,9 +153,10 @@ body {
 // ----- Arrows -----
 #arrows {
   z-index: 2;
-  width: 100%;
   top: 50%;
-  height: 0px;
+  left: 0px;
+  right: 15px;
+  height: 10px;
   // border-top: 1px solid;
   position: absolute;
   display: flex;
@@ -163,14 +164,25 @@ body {
   justify-content: space-between;
   & .left, & .right {
     flex: 0 0 auto;
-    display: block;
-    width: 15px;
-    height: 80px;
-    border: 1px solid;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 0px;
     transform: translate(0px,-50%);
+    font-size: 6em;
     &:hover {
       cursor: pointer;
     }
+  }
+  & .left::before {
+    content: '<';
+  }
+  & .right::before {
+    content: '>';
+  }
+  & .left::before, .right:before {
+    line-height: 0px;
+
   }
 }
 

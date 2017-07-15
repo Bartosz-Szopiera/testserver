@@ -110,22 +110,30 @@ body {
 
 #arrows {
   z-index: 2;
-  width: 100%;
   top: 50%;
-  height: 0px;
+  left: 0px;
+  right: 15px;
+  height: 10px;
   position: absolute;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; }
   #arrows .left, #arrows .right {
     flex: 0 0 auto;
-    display: block;
-    width: 15px;
-    height: 80px;
-    border: 1px solid;
-    transform: translate(0px, -50%); }
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 0px;
+    transform: translate(0px, -50%);
+    font-size: 6em; }
     #arrows .left:hover, #arrows .right:hover {
       cursor: pointer; }
+  #arrows .left::before {
+    content: '<'; }
+  #arrows .right::before {
+    content: '>'; }
+  #arrows .left::before, #arrows .right:before {
+    line-height: 0px; }
 
 .articleWrapper {
   padding: 40px;
