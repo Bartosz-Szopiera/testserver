@@ -39,9 +39,9 @@ nav {
   font-size: 1.35em;
   & li {
     height: auto;
-  }
-  & li:hover {
-    cursor: pointer;
+    & p {
+      cursor: pointer;
+    }
   }
   & li li {
     padding-left: 10px;
@@ -194,6 +194,32 @@ body {
     &#startNavigation li{
       height: 33%;
       font-size: 1.5em;
+      // ----- Background -----
+      & {
+        background-origin: content-box;
+        background-repeat: no-repeat;
+      }
+      &.about {
+        background-image:
+          repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
+          url('../assets/about.gif');
+          background-size: auto, 140px;
+          background-position: 54% 0%;
+      }
+      &.projects {
+        background-image:
+        repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
+        url('../assets/laptopAndCoffee.gif');
+        background-position: 58% 55%;
+        background-size: auto, 300px;
+      }
+      &.contact {
+        background-image:
+        repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
+        url('../assets/contact2.gif');
+        background-position: 50% 55%;
+        background-size: auto, 160px;
+      }
     }
     &#projectsNavigation li{
       height: 25%;

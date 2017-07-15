@@ -26,8 +26,8 @@ nav {
   font-size: 1.35em; }
   nav li {
     height: auto; }
-  nav li:hover {
-    cursor: pointer; }
+    nav li p {
+      cursor: pointer; }
   nav li li {
     padding-left: 10px;
     font-size: 0.9em; }
@@ -144,6 +144,21 @@ body {
     .articleWrapper nav#startNavigation li {
       height: 33%;
       font-size: 1.5em; }
+      .articleWrapper nav#startNavigation li {
+        background-origin: content-box;
+        background-repeat: no-repeat; }
+      .articleWrapper nav#startNavigation li.about {
+        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/about.gif");
+        background-size: auto, 140px;
+        background-position: 54% 0%; }
+      .articleWrapper nav#startNavigation li.projects {
+        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/laptopAndCoffee.gif");
+        background-position: 58% 55%;
+        background-size: auto, 300px; }
+      .articleWrapper nav#startNavigation li.contact {
+        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/contact2.gif");
+        background-position: 50% 55%;
+        background-size: auto, 160px; }
     .articleWrapper nav#projectsNavigation li {
       height: 25%;
       font-size: 1.5em; }
