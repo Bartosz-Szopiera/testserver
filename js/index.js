@@ -43,6 +43,27 @@ var styleSheet = document.querySelector('style').sheet;
   observer.observe(target, config);
 })();
 
+// =============================
+// When changing to the no-sidebar mode function
+// is reading calculated widths of <li> elements
+// and sets them as fixed.
+function noSidebarMode() {
+  // Turn off sidebar
+  document.body.classList.add('noSidebar');
+  // For each <li> set it width
+  // Each p element in sidebar navigation
+  var allP = sideNav.querySelectorAll('li p');
+  for (var i = 0; i < allP.length; i++) {
+    var width = parseFloat(getComputedStyle(allP[i]).width);
+    if (allP[i].dataset.articleIndex === currentIndex) {
+      allP[i].style.width = width + 'px';
+    }
+    else {
+      allP[i].style.width = width*1.25 + 'px';
+    }
+  }
+}
+
 
 // =============================
 // currentIndex - index of curently displayed article
