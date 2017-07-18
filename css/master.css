@@ -216,8 +216,10 @@ body {
     align-items: center; }
     .articleWrapper article section .content {
       font-size: 1.15em; }
+      .articleWrapper article section .content ul {
+        padding-left: 20px; }
       .articleWrapper article section .content li {
-        list-style: disc inside; }
+        list-style: disc; }
   .articleWrapper article.projects section::before {
     content: '#';
     font-weight: bold;
@@ -231,6 +233,7 @@ body {
     color: red; }
 
 #sidebar {
+  overflow: hidden;
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
   width: 15%;

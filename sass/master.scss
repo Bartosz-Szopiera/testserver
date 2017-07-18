@@ -299,8 +299,11 @@ body {
       align-items: center;
       & .content {
         font-size: 1.15em;
+        & ul {
+          padding-left: 20px;
+        }
         & li {
-          list-style: disc inside;
+          list-style: disc;
         }
       }
     }
@@ -329,6 +332,7 @@ body {
 
 // ===== SIDEBAR =====
 #sidebar {
+  overflow: hidden;
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
   width: 15%;
