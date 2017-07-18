@@ -187,17 +187,48 @@ body {
     .articleWrapper header .tableOfContents li:not(:first-of-type) {
       padding-left: 15px; }
     .articleWrapper header .tableOfContents li::before {
-      content: '#'; }
+      content: '#';
+      padding-right: 5px;
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 0px;
+      vertical-align: middle; }
+    .articleWrapper header .tableOfContents li:nth-of-type(1)::before {
+      color: blue; }
+    .articleWrapper header .tableOfContents li:nth-of-type(2)::before {
+      color: green; }
+    .articleWrapper header .tableOfContents li:nth-of-type(3)::before {
+      color: red; }
 .articleWrapper article {
   padding: 0px 10%;
   overflow-y: scroll;
   height: 100%; }
-  .articleWrapper article p:first-of-type {
+  .articleWrapper article p {
+    margin: 0px; }
+    .articleWrapper article p:not(:first-of-type) {
+      margin-top: 0.5em; }
+  .articleWrapper article p {
     margin-top: 0px; }
-  .articleWrapper article .content {
-    font-size: 1.15em; }
-    .articleWrapper article .content li {
-      list-style: circle inside; }
+  .articleWrapper article section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+    .articleWrapper article section .content {
+      font-size: 1.15em; }
+      .articleWrapper article section .content li {
+        list-style: disc inside; }
+  .articleWrapper article.projects section::before {
+    content: '#';
+    font-weight: bold;
+    font-size: 3em;
+    padding-right: 15px; }
+  .articleWrapper article.projects section:nth-of-type(1)::before {
+    color: blue; }
+  .articleWrapper article.projects section:nth-of-type(2)::before {
+    color: green; }
+  .articleWrapper article.projects section:nth-of-type(3)::before {
+    color: red; }
 
 #sidebar {
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
