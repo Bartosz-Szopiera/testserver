@@ -32,13 +32,13 @@ nav {
     padding-left: 10px;
     font-size: 0.9em; }
 
-li > p {
+#sidebar li > p {
   display: inline-block;
   margin: 0px;
   vertical-align: top;
   height: 38px;
   transition: font-size 0.2s; }
-  li > p:hover {
+  #sidebar li > p:hover {
     font-size: 1.25em; }
 
 body {
@@ -100,11 +100,12 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-flow: row nowrap; }
+    flex-flow: row nowrap;
+    align-items: center; }
     #main main > .articleWrapper {
       overflow-y: scroll;
       flex: 0 0 auto;
-      height: 100%;
+      height: 90%;
       width: 100%;
       transform: translate(0px, 0px); }
 
@@ -136,8 +137,7 @@ body {
     line-height: 0px; }
 
 .articleWrapper {
-  padding: 40px;
-  padding-top: 15px; }
+  padding: 0px 10%; }
   .articleWrapper nav {
     text-align: center;
     height: 100%; }
