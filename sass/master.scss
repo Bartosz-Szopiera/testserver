@@ -19,11 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  &:visited {
+  &:visited, &:link {
     color: inherit;
   }
-  &:link {
-    color: inherit;
+}
+
+article a, .articleWrapper .link a {
+  &:link, &:visited {
+    color:blue;
   }
 }
 
@@ -49,7 +52,7 @@ nav {
   }
 }
 
-#sidebar {
+#sidebar, #startNavigation {
   & li>p {
     display: inline-block;
     margin: 0px;
@@ -134,11 +137,11 @@ body {
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     &>.articleWrapper{
-      overflow-y: scroll;
+      overflow: hidden;
       flex: 0 0 auto;
-      height: 90%;
+      height: 95%;
       width: 100%;
       transform: translate(0px,0px);
     }
@@ -182,7 +185,11 @@ body {
 
 // ===== Articles Navigation =====
 .articleWrapper {
-  padding: 0px 10%;
+  &:not(.hidden) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  background: white;
   nav {
     text-align: center;
     height: 100%;
@@ -196,34 +203,37 @@ body {
         flex: 0 0 auto;
       }
     }
-    &#startNavigation li{
-      height: 33%;
-      font-size: 1.5em;
-      // ----- Background -----
-      & {
-        background-origin: content-box;
-        background-repeat: no-repeat;
-      }
-      &.about {
-        background-image:
+    &#startNavigation {
+      padding: 10px;
+      & li {
+        height: 33%;
+        font-size: 1.5em;
+        // ----- Background -----
+        & {
+          background-origin: content-box;
+          background-repeat: no-repeat;
+        }
+        &.about {
+          background-image:
           repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
           url('../assets/about.gif');
           background-size: auto, 140px;
           background-position: 54% 0%;
-      }
-      &.projects {
-        background-image:
-        repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
-        url('../assets/laptopAndCoffee.gif');
-        background-position: 58% 55%;
-        background-size: auto, 300px;
-      }
-      &.contact {
-        background-image:
-        repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
-        url('../assets/contact2.gif');
-        background-position: 50% 55%;
-        background-size: auto, 160px;
+        }
+        &.projects {
+          background-image:
+          repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
+          url('../assets/laptopAndCoffee.gif');
+          background-position: 58% 55%;
+          background-size: auto, 300px;
+        }
+        &.contact {
+          background-image:
+          repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px),
+          url('../assets/contact2.gif');
+          background-position: 50% 55%;
+          background-size: auto, 160px;
+        }
       }
     }
     &#projectsNavigation li{
@@ -238,18 +248,37 @@ body {
 
 // ----- Article -----
 .articleWrapper {
-  & .tableOfContents li {
-    display: inline;
-    &:not(:first-of-type) {
-      padding-left: 15px;
-    }
-    &::before {
-      content: '#';
+  // display: flex;
+  // flex-flow: column nowrap;
+  header {
+    padding: 15px 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    & .tableOfContents {
+      & li {
+        display: inline;
+        &:not(:first-of-type) {
+          padding-left: 15px;
+        }
+        &::before {
+          content: '#';
+        }
+      }
     }
   }
   & article {
+    padding: 0px 10%;
+    overflow-y: scroll;
+    height: 100%;
+    & p:first-of-type {
+      margin-top: 0px;
+    }
     & .content {
       font-size: 1.15em;
+      & li {
+        list-style: circle inside;
+      }
     }
   }
 }

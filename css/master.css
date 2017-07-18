@@ -11,10 +11,11 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none; }
-  a:visited {
+  a:visited, a:link {
     color: inherit; }
-  a:link {
-    color: inherit; }
+
+article a:link, article a:visited, .articleWrapper .link a:link, .articleWrapper .link a:visited {
+  color: blue; }
 
 ul {
   padding: 0px;
@@ -32,13 +33,13 @@ nav {
     padding-left: 10px;
     font-size: 0.9em; }
 
-#sidebar li > p {
+#sidebar li > p, #startNavigation li > p {
   display: inline-block;
   margin: 0px;
   vertical-align: top;
   height: 38px;
   transition: font-size 0.2s; }
-  #sidebar li > p:hover {
+  #sidebar li > p:hover, #startNavigation li > p:hover {
     font-size: 1.25em; }
 
 body {
@@ -101,11 +102,11 @@ body {
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center; }
+    align-items: flex-start; }
     #main main > .articleWrapper {
-      overflow-y: scroll;
+      overflow: hidden;
       flex: 0 0 auto;
-      height: 90%;
+      height: 95%;
       width: 100%;
       transform: translate(0px, 0px); }
 
@@ -137,7 +138,10 @@ body {
     line-height: 0px; }
 
 .articleWrapper {
-  padding: 0px 10%; }
+  background: white; }
+  .articleWrapper:not(.hidden) {
+    display: flex;
+    flex-flow: column nowrap; }
   .articleWrapper nav {
     text-align: center;
     height: 100%; }
@@ -149,36 +153,51 @@ body {
         justify-content: center;
         align-items: center;
         flex: 0 0 auto; }
-    .articleWrapper nav#startNavigation li {
-      height: 33%;
-      font-size: 1.5em; }
+    .articleWrapper nav#startNavigation {
+      padding: 10px; }
       .articleWrapper nav#startNavigation li {
-        background-origin: content-box;
-        background-repeat: no-repeat; }
-      .articleWrapper nav#startNavigation li.about {
-        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/about.gif");
-        background-size: auto, 140px;
-        background-position: 54% 0%; }
-      .articleWrapper nav#startNavigation li.projects {
-        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/laptopAndCoffee.gif");
-        background-position: 58% 55%;
-        background-size: auto, 300px; }
-      .articleWrapper nav#startNavigation li.contact {
-        background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/contact2.gif");
-        background-position: 50% 55%;
-        background-size: auto, 160px; }
+        height: 33%;
+        font-size: 1.5em; }
+        .articleWrapper nav#startNavigation li {
+          background-origin: content-box;
+          background-repeat: no-repeat; }
+        .articleWrapper nav#startNavigation li.about {
+          background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/about.gif");
+          background-size: auto, 140px;
+          background-position: 54% 0%; }
+        .articleWrapper nav#startNavigation li.projects {
+          background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/laptopAndCoffee.gif");
+          background-position: 58% 55%;
+          background-size: auto, 300px; }
+        .articleWrapper nav#startNavigation li.contact {
+          background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/contact2.gif");
+          background-position: 50% 55%;
+          background-size: auto, 160px; }
     .articleWrapper nav#projectsNavigation li {
       height: 25%;
       font-size: 1.5em; }
 
-.articleWrapper .tableOfContents li {
-  display: inline; }
-  .articleWrapper .tableOfContents li:not(:first-of-type) {
-    padding-left: 15px; }
-  .articleWrapper .tableOfContents li::before {
-    content: '#'; }
-.articleWrapper article .content {
-  font-size: 1.15em; }
+.articleWrapper header {
+  padding: 15px 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .articleWrapper header .tableOfContents li {
+    display: inline; }
+    .articleWrapper header .tableOfContents li:not(:first-of-type) {
+      padding-left: 15px; }
+    .articleWrapper header .tableOfContents li::before {
+      content: '#'; }
+.articleWrapper article {
+  padding: 0px 10%;
+  overflow-y: scroll;
+  height: 100%; }
+  .articleWrapper article p:first-of-type {
+    margin-top: 0px; }
+  .articleWrapper article .content {
+    font-size: 1.15em; }
+    .articleWrapper article .content li {
+      list-style: circle inside; }
 
 #sidebar {
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
