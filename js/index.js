@@ -85,10 +85,10 @@ function navigate(direction, target) {
   if (target === undefined) target = this
 
   if (sTiD !== 0) {
-    window.clearTimeout(try_sTiD);
-    return try_sTiD = setTimeout(function(){
-      navigate(direction, target)
-    }, 100,direction,target);
+    // window.clearTimeout(try_sTiD);
+    // return try_sTiD = setTimeout(function(){
+    //   navigate(direction, target)
+    // }, 200,direction,target);
     return
   }
 
@@ -127,7 +127,7 @@ function navigate(direction, target) {
 
   nA.classList.remove('hidden');
 
-  var delay = 0.35;
+  var delay = 0.3;
 
   if (direction === -1) {
     cA.style.transition = 'unset';
