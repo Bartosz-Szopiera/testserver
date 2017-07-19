@@ -64,7 +64,6 @@ function noSidebarMode() {
   }
 }
 
-
 // =============================
 // currentIndex - index of curently displayed article
 // newIndex = index of article to be displayed
@@ -113,7 +112,6 @@ function navigate(direction, target) {
     else direction = 1
   }
 
-
   var selector = '.articleWrapper[data-article-index="'+ newIndex +'"]';
   var nA = document.querySelector(selector);
   if (nA === null) return // When newIndex excides existing articles
@@ -129,19 +127,22 @@ function navigate(direction, target) {
 
   var delay = 0.3;
 
+  cA.style.transition = 'transform';
+  nA.style.transition = 'transform';
+
   if (direction === -1) {
-    cA.style.transition = 'unset';
-    nA.style.transition = 'unset';
+    cA.style.transitionDuration = '0s';
+    nA.style.transitionDuration = '0s';
     cA.style.transform = 'translate(-100%,0px)';
     nA.style.transform = 'translate(-100%,0px)';
     sTiD = setTimeout(function(){
-      cA.style.transition = 'transform ' + delay +'s';
-      nA.style.transition = 'transform ' + delay +'s';
+      cA.style.transitionDuration = delay + 's';
+      nA.style.transitionDuration = delay + 's';
       cA.style.transform = 'translate(0%,0px)';
       nA.style.transform = 'translate(0%,0px)';
       sTiD = setTimeout(function(){
-        cA.style.transition = 'unset';
-        nA.style.transition = 'unset';
+        cA.style.transitionDuration = '0s';
+        nA.style.transitionDuration = '0s';
         cA.classList.add('hidden');
         setTimeout(function(){sTiD = 0;},50);
       }, delay*1000);
@@ -149,22 +150,26 @@ function navigate(direction, target) {
   }
   else {
     sTiD = setTimeout(function(){
-      cA.style.transition = 'transform ' + delay +'s';
-      nA.style.transition = 'transform ' + delay +'s';
+      cA.style.transitionDuration = delay + 's';
+      nA.style.transitionDuration = delay + 's';
       cA.style.transform = 'translate(-100%,0px)';
       nA.style.transform = 'translate(-100%,0px)';
+      sTiD = setTimeout(function(){
+        cA.style.transitionDuration = '0s';
+        nA.style.transitionDuration = '0s';
+        cA.style.transform = 'translate(0%,0px)';
+        nA.style.transform = 'translate(0%,0px)';
+        cA.classList.add('hidden');
+        setTimeout(function(){sTiD = 0;},50);
+      },delay*1000);
     });
-    sTiD = setTimeout(function(){
-      cA.style.transition = 'unset';
-      nA.style.transition = 'unset';
-      cA.style.transform = 'translate(0%,0px)';
-      nA.style.transform = 'translate(0%,0px)';
-      cA.classList.add('hidden');
-      setTimeout(function(){sTiD = 0;},50);
-    },delay*1000);
   }
 
   currentIndex = newIndex;
   document.querySelector('main').dataset.currentIndex = currentIndex;
 }
 // =============================
+// Inform the user of the e-mail status.
+function emailAlert() {
+
+}
