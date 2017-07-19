@@ -9,6 +9,9 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
+* {
+  user-select: none; }
+
 a {
   text-decoration: none; }
   a:visited, a:link {
@@ -231,6 +234,12 @@ body {
     color: green; }
   .articleWrapper article.projects section:nth-of-type(3)::before {
     color: red; }
+  .articleWrapper article.contact section {
+    font-size: 2.5em;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around; }
 
 #sidebar {
   overflow: hidden;

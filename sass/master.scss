@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 
+* {
+  user-select: none;
+}
+
 a {
   text-decoration: none;
   &:visited, &:link {
@@ -323,6 +327,13 @@ body {
       &:nth-of-type(3)::before{
         color: red;
       }
+    }
+    &.contact section{
+      font-size: 2.5em;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
     }
   }
 }
