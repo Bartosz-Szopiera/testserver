@@ -221,7 +221,6 @@
                     <li>Elementy GUI do sterowania siłami które stowrzyłem w canvie powinny być raczej zrobione w SVG.</li>
                     <li>Niejasna wizja tego co budowałem przekłada się na layout menusów który ciężko sprawić responsywnym.</li>
                     <li>FPS animacji jest w praktyce niekontrolowany. Obliczanie pozycji pixeli nie odbywa się na żywo. Użytkownik widzi jedynie nagranie obliczonych pozycji, a do tego - ponieważ animacje nie są na canvie - realny upływ czasu nie gra roli w wyświetlaniu klatek, więc spowolnienia systemu spowodują spowolnienia animacji.</li>
-                    <li>Całość wygląda jak zalążek silnika graficznego, ale renderowanie jest bardzo sztuczne - nagrywanie 60 klatek na sekundę pożądanej animacji, a potem odtwarzanie ich w zapętlonym setTimeout'cie pomijąjąc opóźnienie na działanie funckji... Trzeba by sporo pracy, żeby uzyskać coś w rodzaju silnika czasu rzeczywistego i prawdopodobnie większość należałoby zmienić.</li>
                     <li>Jest kilka istotnych dla zabawy z użytkwania aplikacji funkcjonalności z których na tą chwilę zrezygnowałem z braku czasu.</li>
                   </ul>
                 </div>
@@ -271,6 +270,7 @@
                 <div class="text">
                   <ul>
                     <li>Ponieważ robiona nieco w pośpiechu i dlatego, że wciąż nie podążam za konkrentą metodą nadawania klas i pisania stylu, scss jest trochę chaotyczny.</li>
+                    <li>Zdaża się sklajdy są przełączane natychmiastowo i nie znam tego dokładnej przyczyny ale domyślam się, że problem tkwi w wykorzystaniu setTimeout lub wynikających z pracy systemu opóźnieniach w renderowaniu elementów przez przeglądarkę.</li>
                   </ul>
                 </div>
               </div>
@@ -285,8 +285,40 @@
           <article class="contact">
             <!-- FORM -->
             <div class="form">
-              <form id="contactForm" method="post"></form>
-
+              <form id="contactForm" action="javascript:sendEmail()">
+                <div class="input receiver">
+                  <label>For:
+                    <input type="text" disabled name="to_name" value="Bartosz Szopiera">
+                  </label>
+                  <label>E-mail:
+                    <input type="e-mail" disabled name="to_address" value="bartosz.szopiera@gmail.com">
+                  </label>
+                </div>
+                <div class="input sender">
+                  <label>From:
+                    <input type="text" required name="from_name" value="John Doe">
+                  </label>
+                  <label>E-mail:
+                    <input type="e-mail" required name="from_address" value="example@example.com">
+                  </label>
+                </div>
+                <div class="">
+                  <label>Subject:
+                    <input type="text" name="subject" value="">
+                  </label>
+                </div>
+                <div class="input message">
+                  <textarea name="message" rows="8" cols="80"></textarea>
+                </div>
+                <div class="input sendCopy">
+                  <label>Send me a copy
+                    <input type="checkbox" name="send_copy" value="true">
+                  </label>
+                </div>
+                <div class="input send">
+                  <input type="submit" name="" value="Send">
+                </div>
+              </form>
             </div>
           </article>
         </div>
@@ -321,4 +353,5 @@
     </div>
   </body>
   <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
 </html>
