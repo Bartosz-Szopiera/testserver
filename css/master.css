@@ -34,7 +34,8 @@ nav {
   nav li {
     height: auto; }
     nav li p {
-      cursor: pointer; }
+      cursor: pointer;
+      white-space: nowrap; }
   nav li li {
     padding-left: 10px;
     font-size: 0.9em; }
@@ -244,6 +245,7 @@ body {
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
   width: 15%;
+  min-width: 140px;
   padding-left: 20px;
   flex: 0 0 auto;
   display: flex;
