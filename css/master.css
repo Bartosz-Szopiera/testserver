@@ -77,9 +77,10 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
     position: relative;
     width: 100%; }
+    #header header:not(.fixedHeader) {
+      justify-content: center; }
     #header header h1 {
       font-size: 2em;
       margin: 0px; }
@@ -308,7 +309,7 @@ body {
   body #header {
     min-height: unset;
     height: 60px; }
-    body #header header:not(.forHigherSpecificity) {
+    body #header header {
       height: 100%;
       justify-content: left; }
   body #sidebar {
