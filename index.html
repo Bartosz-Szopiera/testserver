@@ -12,7 +12,36 @@
   <body>
     <div id="header">
       <header>
-        <h1>id="Bartosz_Szopiera" <span>class="Web_Developer"</span></h1>
+        <div class="core">
+          <h1>id="Bartosz_Szopiera" <span>class="Web_Developer"</span></h1>
+        </div>
+        <!-- <div class="extended">
+          <nav id="headerNavigation">
+            <ul>
+              <li class="text"><p data-article-index="0">Start</p></li>
+              <li class="text"><p data-article-index="1">O mnie</p></li>
+              <li class="text"><p data-article-index="2">Projekty</p>
+                <ul>
+                  <li class="text"><p data-article-index="201">Orphans</p></li>
+                  <li class="text"><p data-article-index="202">Unity</p></li>
+                  <li class="text"><p data-article-index="203">Exploder</p></li>
+                  <li class="text"><p data-article-index="204">Ta strona</p></li>
+                </ul>
+              </li>
+              <li calss="text"><p data-article-index="3">Kontakt</p></li>
+            </ul>
+          </nav>
+          <div id="languageList" class="languageList">
+            <ul>
+              <li><p>EN</p></li>
+              <li><p>PL</p></li>
+            </ul>
+          </div>
+          <div id="sidebarLinks" class="links">
+            <a class="cv" href="download/Szopiera Bartosz Junior Front-End.pdf" target="_blank">CV</a>
+            <a class="github" href="https://github.com/bart5">GitHub</a>
+          </div>
+        </div> -->
       </header>
     </div>
     <div id="main" class="mainArea">
@@ -26,9 +55,9 @@
         <div class="articleWrapper start" data-article-index="0">
           <nav id="startNavigation" class="start">
             <ul>
-              <li class="about"><p data-article-index="1">O mnie</p></li>
-              <li class="projects"><p data-article-index="2">Projekty</p></li>
-              <li class="contact"><p data-article-index="3">Kontakt</p></li>
+              <li class="about"><p data-article-index="1"><span class="text pl">O mnie</span><span class="text en">About Me</span></p></li>
+              <li class="projects"><p data-article-index="2"><span class="text pl">Projekty</span><span class="text en">Projects</span></p></li>
+              <li class="contact"><p data-article-index="3"><span class="text pl">Kontakt</span><span class="text en">Contact</span></p></li>
             </ul>
           </nav>
         </div>
@@ -36,12 +65,12 @@
         <div class="articleWrapper about hidden" data-article-index="1">
           <!-- BASIC CONTENT INFO -->
           <header>
-            <div class="subject text"></div>
+            <!-- <div class="subject text"></div> -->
             <div class="tableOfContents">
               <!-- <ul>
                 <li><a class="text" href="#about-1">Opis</a></li>
-                <li><a class="text" href="#about-2">Co się udało</a></li>
-                <li><a class="text" href="#about-3">Co można poprawić</a></li>
+                <li><a class="text" href="#about-2">Udane</a></li>
+                <li><a class="text" href="#about-3">Nieudane</a></li>
               </ul> -->
             </div>
           </header>
@@ -50,11 +79,13 @@
             <section id="about-1">
               <div class="content">
                 <div class="text">
-                  <p>Jestem absolwentem Politechniki Gdańskiej na której uzyskałem tytuł magistra inżyniera budownictwa.</p>
-                  <p>Miałem okazję zetknąć się z programowaniem w trakcie studiów w ramach zajęć z Matlaba, a później przy okazji zainteresowania, rynkiem forex i skyrptowaniem w terminalu handlowym (Metatrader).</p>
-                  <p>W krótkim czasie po studiach zdecydowałem się zmienić branże budowlaną na coś innego, i niebawem postanowiłem skupić się na web-developmencie.</p>
-                  <p>Dzisiaj, po prawie roku samodzielnej nauki, potrafię zrobić wiele rzeczy o których jeszcze niedawno nie miałem pojęcia. Część mojej pracy własnej była mało efektywna ponieważ zbyt wiele czasu poświęciłem teoretycznej nauce zagadnień zamiast pisaniu kodu, ale przechodząc w końcu do praktyki nauczyłem się zrobić dużo z tego co można znaleźć na stronach internetowych.</p>
-                  <p>Mimo to zdaje sobie sprawę, że brakuje mi pewnych dobrych praktyk w pisaniu łatwego w konserwacji kodu oraz wiedzy o bibliotekach i frameworkach które sprawiłyby, że pracowałbym szybciej. Liczę jednak że wkrótce przy okazji pracy nad zadaniami z prawdziwego zdarzenia i korzystając z wiedzy bardziej doświadczonych osób nadrobię wszelkie braki.</p>
+                  <p><span class="text pl">Jestem absolwentem Politechniki Gdańskiej na której uzyskałem tytuł magistra inżyniera budownictwa.</span><span class="text en">I graduated from Gdańsk University of Technology with master's diploma in civil engineering.</span></p>
+                  <p><span class="text pl">Miałem okazję zetknąć się z programowaniem w trakcie studiów w ramach zajęć z Matlaba (pochodne C++), a później przy okazji zainteresowania rynkiem forex i skryptowaniem w terminalu handlowym (Metatrader - MQL4).</span><span class="text en">My interest in programming started from course in Matlab (which utilizes scripts for data analyzis and visualization - derivative of C++) and by the way the interest in foreign-exchange market trading (popular terminal comes with IDE for auto-trading scripts).</span></p>
+                  <p><span class="text pl">W krótkim czasie po studiach zdecydowałem się zmienić branże budowlaną na coś innego, i niebawem postanowiłem skupić się na web-developmencie.</span><span class="text en">In short time after graduation I decided to transition from construction industry to something else. Eventually I made-up my mind to pursue web-development.</span></p>
+                  <p><span class="text pl">Spędziłem okołu rok na samodzielnej nauce od zera, której (niestety) duża część była teoretyczna, a reszta to kilka samodzielnych projektów krótko na tej stronie opisanych i udostępniony.</span><span class="text en">I have spent about a year on self-learning from zero, and mostly (but sadly) I focused on theory, with rest of the time focused on few projects which are briefly described on this site and made available.</span></p>
+                  <p><span class="text pl">W czasie mojej nauki w pewnym stopniu (najlepiej widocznym w projektach) poznałem HTML, CSS, SASS, JavaScript, PHP i SQL.</span><span class="text en">So far I learnt in some extent (best portrayed by projects) HTML, CSS, SASS, JavaScript, PHP and SQL.</span></p>
+                  <p><span class="text pl">Głównymi kwestiami które w tym momencie widzę jako swoje braki do nadrobienia to narzędzia do usprawnienia i uporządkowania mojej pracy i jej efektów: frameworki, biblioteki, filozofie pisania stylu (BEM, SMACSS..), dobre praktyki pisania kodu, ogólny toolchain do wydajnego działania.</span><span class="text en">Main areas I know I'm lacking skill in are tools that would make my work more efficient and organized: frameworks, libraries, style writing philosophies (BEM, SMACSS..), good practices in code writing, general toolchain for productivity.</span></p>
+                  <p><span class="text pl">Liczę, że przy okazji pracy nad zadaniami z prawdziwego zdarzenia i korzystając z wiedzy bardziej doświadczonych osób jestem w stanie dalej rozwijać swoje kompetencje i stać się lepszym developerem.</span><span class="text en">I think that with an opportunity to work on real projects and with advice of more experienced people I'm able to improve my skills and become better developer.</span></p>
                 </div>
               </div>
             </section>
@@ -67,10 +98,10 @@
           <!--===== PROJECTS NAVIGATION =====-->
           <nav id="projectsNavigation" class="start">
             <ul>
-              <li class="about"><p data-article-index="201">Orphans</p></li>
-              <li class="projects"><p data-article-index="202">Unity3D</p></li>
-              <li class="contact"><p data-article-index="203">Exploder</p></li>
-              <li class="contact"><p data-article-index="204">This Site</p></li>
+              <li class="about"><p data-article-index="201"><span class="text pl">Orphans</span><span class="text en">Orphans</span></p></li>
+              <li class="projects"><p data-article-index="202"><span class="text pl">Unity3D</span><span class="text en">Unity3D</span></p></li>
+              <li class="contact"><p data-article-index="203"><span class="text pl">Exploder</span><span class="text en">Exploder</span></p></li>
+              <li class="contact"><p data-article-index="204"><span class="text pl">Ta Strona</span><span class="text en">This Site</span></p></li>
             </ul>
           </nav>
         </div>
@@ -81,9 +112,9 @@
             <!-- <div class="subject text"></div> -->
             <div class="tableOfContents">
               <ul>
-                <li><a class="text" href="#projects-1-1">Opis</a></li>
-                <li><a class="text" href="#projects-1-2">Co się udało</a></li>
-                <li><a class="text" href="#projects-1-3">Co można poprawić</a></li>
+                <li><a class="text" href="#projects-1-1"><span class="text pl">Opis</span><span class="text en">Intro</span></a></li>
+                <li><a class="text" href="#projects-1-2"><span class="text pl">Udane</span><span class="text en">Wins</span></a></li>
+                <li><a class="text" href="#projects-1-3"><span class="text pl">Nieudane</span><span class="text en">Fails</span></a></li>
               </ul>
             </div>
             <div class="link">
@@ -94,20 +125,20 @@
           <article class="projects"><!--
           --><section id="projects-1-1">
               <div class="content">
-                <div class="text PL">
-                  <p>Strona ta jest próbą samodzielnego odbudowania pierwszej strony serwisu <a href="https://orphans.co.uk">orphans.co.uk</a>. Oryginalna strona przykuła moją uwagę różnordnością i kilkoma graficznymi efektami które wyglądały na ciekawe wyzwanie. Korzystałem z oryginalnych assetów graficznych.</p>
+                <div class="text">
+                  <p><span class="text pl">Strona ta jest próbą samodzielnego odbudowania pierwszej strony serwisu <a href="https://orphans.co.uk">orphans.co.uk</a>. Oryginalna strona przykuła moją uwagę różnordnością i kilkoma graficznymi efektami które wyglądały na ciekawe wyzwanie. Korzystałem z oryginalnych assetów graficznych.</span><span class="text en">This website is an attempt on rebuilding first page of website <a href="https://orphans.co.uk">orphans.co.uk</a>. The website attracted my attention with it's varied layout and a few visual effects that looked like a good challenge. I was using original graphics assets of the website.</span></p>
                 </div>
               </div>
             </section>
             <section id="projects-1-2">
               <div class="content">
-                <div class="text PL">
+                <div class="text">
                   <ul>
-                    <li>Odbudowana strona zewnętrznie działa i wygląda niemal identycznie jak oryginał.</li>
-                    <li>Górna nawigacja zachowuje się płynniej.</li>
-                    <li>Wykresy zachowują się lepiej kiedy użytkownik zmienia kierunek scrollowania.</li>
-                    <li>Strona jest w pełni responsywna.</li>
-                    <li>Strona działa dobrze na wszystkich przeglądarkach.</li>
+                    <li><span class="text pl">Odbudowana strona zewnętrznie działa i wygląda niemal identycznie jak oryginał.</span><span class="text en">Rebuilt webpage works and looks almost identical to the model.</span></li>
+                    <li><span class="text pl">Górna nawigacja zachowuje się płynniej.</span><span class="text en">Top navigation works more fluid than originally.</span></li>
+                    <li><span class="text pl">Wykresy zachowują się lepiej kiedy użytkownik zmienia kierunek scrollowania.</span><span class="text en">Charts work better when the user is rapidly changing scroll direction.</span></li>
+                    <li><span class="text pl">Strona jest w pełni responsywna.</span><span class="text en">Webpage is fully responsive.</span></li>
+                    <li><span class="text pl">Strona działa dobrze na wszystkich przeglądarkach.</span><span class="text en">It works well on all browsers.</span></li>
                   </ul>
                 </div>
               </div>
@@ -116,8 +147,8 @@
               <div class="content">
                 <div class="text PL">
                   <ul>
-                    <li>Wydajność animacji wykresów mogłaby być lepsza, a ponieważ są na canvie można by je prerenderować.</li>
-                    <li>Nie znalazłem idealnego sposobu na płynne scrollowanie w IE i Edge.</li>
+                    <li><span class="text pl">Wydajność animacji wykresów mogłaby być lepsza - ponieważ są na canvie można by je prerenderować.</span><span class="text en">Animations perfmormance might be tter - since the canvas is used they could be prerendered.</span></li>
+                    <li><span class="text pl">Nie znalazłem idealnego sposobu na płynne scrollowanie w IE i Edge.</span><span class="text en">I haven't found an ideal solutions for jerky and clunky scrolling in IE and Edge.</span></li>
                   </ul>
                 </div>
               </div>
@@ -133,9 +164,9 @@
             <!-- <div class="subject text"></div> -->
             <div class="tableOfContents">
               <ul>
-                <li><a class="text" href="#projects-2-1">Opis</a></li>
-                <li><a class="text" href="#projects-2-2">Co się udało</a></li>
-                <li><a class="text" href="#projects-2-3">Co można poprawić</a></li>
+                <li><a class="text" href="#projects-2-1"><span class="text pl">Opis</span><span class="text en">Intro</span></a></li>
+                <li><a class="text" href="#projects-2-2"><span class="text pl">Udane</span><span class="text en">Wins</span></a></li>
+                <li><a class="text" href="#projects-2-3"><span class="text pl">Nieudane</span><span class="text en">Fails</span></a></li>
               </ul>
             </div>
             <div class="link">
@@ -147,7 +178,7 @@
             <section id="projects-2-1">
               <div class="content">
                 <div class="text">
-                  <p>Strona jest odtworzenie głównej strony serwisu <a href="https://unity3d.com">unity3d.com</a>. Przykuła moją uwagę dobrym wyglądem, a jednocześnie layoutem który zdawał się prosty oraz tym, że miała pokaz slajdów który był okazją to ćwiczenia JavaScripta.</p>
+                  <p><span class="text pl">Strona jest odtworzenie głównej strony serwisu <a href="https://unity3d.com">unity3d.com</a>. Przykuła moją uwagę dobrym wyglądem, a jednocześnie layoutem który zdawał się prosty oraz tym, że miała pokaz slajdów który był okazją to ćwiczenia JavaScripta.</span><span class="text en">This webpage is reproduction of main-page of <a href="https://unity3d.com">unity3d.com</a> website. It had captivating layout which seemed pretty simple at the same time and featured slideshows were good opportunity to learn JavaScript.</span></p>
                 </div>
               </div>
             </section>
@@ -155,8 +186,8 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Cały layout został dobrze odbudowany (oryginalna strona nieco się ostatnio zmieniła).</li>
-                    <li>Udało mi się odtworzyć pokaz slajdów w JS.</li>
+                    <li><span class="text pl">Cały layout został dobrze odbudowany (oryginalna strona nieco się ostatnio zmieniła).</span><span class="text en">Whole layout was rebuild with success (original website changed a bit lately).</span></li>
+                    <li><span class="text pl">Udało mi się odtworzyć pokaz slajdów w JS.</span><span class="text en">I managed to reproduce the slideshow in JS.</span></li>
                   </ul>
                 </div>
               </div>
@@ -165,9 +196,9 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Skrypt pokazu slajdów jest przekomplikowany, co wynika z faktu, że użyłem clojura chociaż nie było takiej potrzeby, oraz tego, że zbagatelizowałem nieco to zadanie i nie przemyślałem dobrze wcześniej elementów HTML i stylu w CSS.</li>
-                    <li>Pokaz slajdów nie działa na przeciąganie kursorem.</li>
-                    <li>Brakuje responsywności.</li>
+                    <li><span class="text pl">Skrypt pokazu slajdów jest przekomplikowany, co wynika z faktu, że użyłem clojura chociaż nie było takiej potrzeby, oraz tego, że zbagatelizowałem nieco to zadanie i nie przemyślałem dobrze wcześniej elementów HTML i stylu w CSS.</span><span class="text en">Slideshow script is overly complex since I utilized clojures which were in fact unecessary, and also because HTML and CSS foundation for this slideshow was not most thoughtful.</span></li>
+                    <li><span class="text pl">Pokaz slajdów nie działa na przeciąganie kursorem.</span><span class="text en">Slideshow isn't controllable with dragging.</span></li>
+                    <li><span class="text pl">Brakuje responsywności.</span><span class="text en">Page is not responsive.</span></li>
                   </ul>
                 </div>
               </div>
@@ -183,9 +214,9 @@
             <!-- <div class="subject text"></div> -->
             <div class="tableOfContents">
               <ul>
-                <li><a class="text" href="#projects-3-1">Opis</a></li>
-                <li><a class="text" href="#projects-3-2">Co się udało</a></li>
-                <li><a class="text" href="#projects-3-3">Co można poprawić</a></li>
+                <li><a class="text" href="#projects-3-1"><span class="text pl">Opis</span><span class="text en">Intro</span></a></li>
+                <li><a class="text" href="#projects-3-2"><span class="text pl">Udane</span><span class="text en">Wins</span></a></li>
+                <li><a class="text" href="#projects-3-3"><span class="text pl">Nieudane</span><span class="text en">Fails</span></a></li>
               </ul>
             </div>
             <div class="link">
@@ -197,7 +228,7 @@
             <section id="projects-3-1">
               <div class="content">
                 <div class="text">
-                  <p>To pierwszy projekt który wykonałem według własnego pomysłu. Miał poczatkowo służyć głównie poznaniu podstaw PHP, SQL, AJAX i SASS, ale ze względu na abstrakcyjną i zmieniającą się często wizję, znaczną część pracy pochłąnął jak zawsze JavaScript. Punktem wyjścia dla projektu było idea animacji napisów stworzonych z 'pixeli'.</p>
+                  <p><span class="text pl">To pierwszy projekt który wykonałem według własnego pomysłu. Miał poczatkowo służyć głównie poznaniu podstaw PHP, SQL, AJAX i SASS, ale ze względu na abstrakcyjną i zmieniającą się często wizję, znaczną część pracy pochłąnął jak zawsze JavaScript. Punktem wyjścia dla projektu było idea animacji napisów stworzonych z 'pixeli'.</span><span class="text en">This is the first project according to my own idea. It was initially supposed to briefly introduce me to the PHP, SQL, AJAX and SASS, but due to abstract and constantly evolving vision it took a lot of time and most of the work was as usuall centered around JavaScript. The core idea was to animate texts built out from pixels.</span></p>
                 </div>
               </div>
             </section>
@@ -205,10 +236,10 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Komunikacja z serwerem działa i AJAX w czystym JS daje radę.</li>
-                    <li>PHP mimo, że w bardzo prostej formie spełnia zadanie.</li>
-                    <li>Cały idea pixeli pod działaniem sił i w miare przyzwoitego GUI do sterowania całością została zrealizowana.</li>
-                    <li>Ponieważ animacje stanowią jedynie odtworzenie obliczonych i zapisanych pozycji, powinny działać z dobrą wydajnością i zdaje się, że tak jest.</li>
+                    <li><span class="text pl">Komunikacja z serwerem działa i AJAX w czystym JS daje radę.</span><span class="text en">Communication with server works and AJAX written with raw JS performs well.</span></li>
+                    <li><span class="text pl">PHP mimo, że w bardzo prostej formie spełnia zadanie.</span><span class="text en">Despite it's simplistic form, PHP works well.</span></li>
+                    <li><span class="text pl">Cała idea pixeli pod działaniem sił i w miare przyzwoitego GUI do sterowania całością została zrealizowana.</span><span class="text en">The whole core idea was successfuly implemented.</span></li>
+                    <li><span class="text pl">Ponieważ animacje stanowią jedynie odtworzenie obliczonych i zapisanych pozycji, powinny działać z dobrą wydajnością i zdaje się, że tak jest.</span><span class="text en">Since animations are only replay of previously computed and recorded positions, they should perform well, and it looks like they do.</span></li>
                   </ul>
                 </div>
               </div>
@@ -217,11 +248,11 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Sanitacja danych wysyłanych na serwer sprowadza się tylko do potwierdzenia czy są jakiekolwiek i czy użtykownik ma konto lub modyfikuje dane przypisane do swojego konta. Żadnych regexów lub czegoś więcej.</li>
-                    <li>Elementy GUI do sterowania siłami które stowrzyłem w canvie powinny być raczej zrobione w SVG.</li>
-                    <li>Niejasna wizja tego co budowałem przekłada się na layout menusów który ciężko sprawić responsywnym.</li>
-                    <li>FPS animacji jest w praktyce niekontrolowany. Obliczanie pozycji pixeli nie odbywa się na żywo. Użytkownik widzi jedynie nagranie obliczonych pozycji, a do tego - ponieważ animacje nie są na canvie - realny upływ czasu nie gra roli w wyświetlaniu klatek, więc spowolnienia systemu spowodują spowolnienia animacji.</li>
-                    <li>Jest kilka istotnych dla zabawy z użytkwania aplikacji funkcjonalności z których na tą chwilę zrezygnowałem z braku czasu.</li>
+                    <li><span class="text pl">Sanitacja danych wysyłanych na serwer sprowadza się tylko do potwierdzenia czy są jakiekolwiek i czy użytkownik ma konto lub modyfikuje dane przypisane do swojego konta. Żadnych regexów lub czegoś więcej.</span><span class="text en">Sanitation of user input boils down only to the confirmation of that the data is not null and that user has appropriate right to add or modify data.</span></li>
+                    <li><span class="text pl">Elementy GUI do sterowania siłami które stowrzyłem w canvie powinny być raczej zrobione w SVG.</span><span class="text en">GUI elements that control forces are created in canvas but probably shuld be made with SVG.</span></li>
+                    <li><span class="text pl">Niejasna wizja tego co budowałem przekłada się na layout menusów który ciężko sprawić responsywnym.</span><span class="text en">Unclear vision of the project lead to quite random UI which is difficult to turn into responsive one.</span></li>
+                    <li><span class="text pl">FPS animacji jest w praktyce niekontrolowany. Obliczanie pozycji pixeli nie odbywa się na żywo. Użytkownik widzi jedynie nagranie obliczonych pozycji, a do tego - ponieważ animacje nie są na canvie - realny upływ czasu nie gra roli w wyświetlaniu klatek, więc spowolnienia systemu spowodują spowolnienia animacji.</span><span class="text en">Animation FPS is in fact uncontrollable. Pixels positions are precomputed and leter replayed in fixed framerate that is however dependant on the engine and hardware performance, and can't be adjusted to real time without clunky interpolations.</span></li>
+                    <li><span class="text pl">Jest kilka istotnych dla zabawy z użytkwania aplikacji funkcjonalności z których na tą chwilę zrezygnowałem z braku czasu.</span><span class="text en">There are a few vital for the user experience features that I had no time to implement since core functionalities were already very time-consuming for me.</span></li>
                   </ul>
                 </div>
               </div>
@@ -234,12 +265,12 @@
         <div class="articleWrapper projects hidden" data-article-index="204">
           <!-- BASIC CONTENT INFO -->
           <header>
-            <div class="subject text"></div>
+            <!-- <div class="subject text"></div> -->
             <div class="tableOfContents">
               <ul>
-                <li><a class="text" href="#projects-4-1">Opis</a></li>
-                <li><a class="text" href="#projects-4-2">Co się udało</a></li>
-                <li><a class="text" href="#projects-4-3">Co można poprawić</a></li>
+                <li><a class="text" href="#projects-4-1"><span class="text pl">Opis</span><span class="text en">Intro</span></a></li>
+                <li><a class="text" href="#projects-4-2"><span class="text pl">Udane</span><span class="text en">Wins</span></a></li>
+                <li><a class="text" href="#projects-4-3"><span class="text pl">Nieudane</span><span class="text en">Fails</span></a></li>
               </ul>
             </div>
             <div class="link">
@@ -251,7 +282,7 @@
             <section id="projects-4-1">
               <div class="content">
                 <div class="text">
-                  <p>Prosta strona wg własnego pomysłu mająca zaprezentować moją osobę i moje prace.</p>
+                  <p><span class="text pl">Prosta strona według własnego pomysłu mająca zaprezentować moją osobę i moje prace.</span><span class="text en">This is a simple website for presentiation of myself as a developer.</span></p>
                 </div>
               </div>
             </section>
@@ -259,8 +290,9 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Jestem zadowolony z ogólnej prostoty, tak funkcjonalności jak i designu.</li>
-                    <li>Ze względu na zamykanie się w jednym ekranie praca nad stroną była prosta i przyjemna.</li>
+                    <li><span class="text pl">Jestem zadowolony z ogólnej prostoty, tak funkcjonalności jak i designu.</span><span class="text en">I'm satisfied with general functional and design simplicity.</span></li>
+                    <li><span class="text pl">Ze względu na zamykanie się w jednym ekranie praca nad stroną była wygodna.</span><span class="text en">Due to viewport-confined layout work on this page was quite comfortable.</span></li>
+                    <li><span class="text pl">Strona jest w pełni responsywna.</span><span class="text en">Website is fully responsive.</span></li>
                   </ul>
                 </div>
               </div>
@@ -269,8 +301,9 @@
               <div class="content">
                 <div class="text">
                   <ul>
-                    <li>Ponieważ robiona nieco w pośpiechu i dlatego, że wciąż nie podążam za konkrentą metodą nadawania klas i pisania stylu, scss jest trochę chaotyczny.</li>
-                    <li>Zdaża się sklajdy są przełączane natychmiastowo i nie znam tego dokładnej przyczyny ale domyślam się, że problem tkwi w wykorzystaniu setTimeout lub wynikających z pracy systemu opóźnieniach w renderowaniu elementów przez przeglądarkę.</li>
+                    <li><span class="text pl">Ponieważ robiona nieco w pośpiechu i dlatego, że wciąż nie podążam za konkrentą metodą nadawania klas i pisania stylu, CSS jest dość chaotyczny.</span><span class="text en">Since built a bit hastily and since I still haven't adopted any standard for style code the CSS is pretty chaotic.</span></li>
+                    <li><span class="text pl">Zdaża się sklajdy są przełączane natychmiastowo. Jest to prawdopodobnie bug związany z przeskakiwaniem klatek w 'transition: transform' występujący w Chrome.</span><span class="text en">It happens that slides/articles are swtiched without transition. It is propably caused with Chrome frames-skipping bug when 'transform' is transitioned.</span></li>
+                    <li><span class="text pl">Wybór flexboxa w formie columny do zamykania 3 głównych elementów layoutu jest nietrafiony, ponieważ akomodacja szerokości elementów jest niewłaściwa jeśli jeden z nich ma zachować określony wymiar.</span><span class="text en">It was a poor choice to use flexbox with column flow as a container for 3 main layout elements, as the flexbox is not resizing columns widths in a desired way when one of columns has fixed size.</span></li>
                   </ul>
                 </div>
               </div>
@@ -284,8 +317,8 @@
         <div id="contact" class="articleWrapper hidden" data-article-index="3">
           <article class="contact">
             <section>
-              <h1 title="Send with your e-mail client"><a href="mailto:bartosz.szopiera@gmail.com">bartosz.szopiera@gmail.com</a></h1>
-              <h1 title="Open in a new tab"><a href="/Szopiera Bartosz Junior Front-End.pdf" target="_blank">CV</a></h1>
+              <h1 class="email" title="Send with your e-mail client"><a href="mailto:bartosz.szopiera@gmail.com">bartosz.szopiera@gmail.com</a></h1>
+              <h1 title="Open in a new tab"><a href="download/Szopiera Bartosz Junior Front-End.pdf" target="_blank">CV</a></h1>
             </section>
             <!-- FORM -->
             <!-- <div class="form">
@@ -331,28 +364,29 @@
     <div id="sidebar" class="sidebar side">
       <nav id="sidebarNavigation">
         <ul>
-          <li class="text"><p data-article-index="0">Start</p></li>
-          <li class="text"><p data-article-index="1">O mnie</p></li>
-          <li class="text"><p data-article-index="2">Projekty</p>
+          <li class="text"><p data-article-index="0"><span class="text pl">Start</span><span class="text en">Start</span></p></li>
+          <li class="text"><p data-article-index="1"><span class="text pl">O mnie</span><span class="text en">About Me</span></p></li>
+          <li class="text"><p data-article-index="2"><span class="text pl">Projekty</span><span class="text en">Projects</span></p>
             <ul>
-              <li class="text"><p data-article-index="201">Orphans</p></li>
-              <li class="text"><p data-article-index="202">Unity</p></li>
-              <li class="text"><p data-article-index="203">Exploder</p></li>
-              <li class="text"><p data-article-index="204">Ta strona</p></li>
+              <li class="text"><p data-article-index="201"><span class="text pl">Orphans</span><span class="text en">Orphans</span></p></li>
+              <li class="text"><p data-article-index="202"><span class="text pl">Unity</span><span class="text en">Unity</span></p></li>
+              <li class="text"><p data-article-index="203"><span class="text pl">Exploder</span><span class="text en">Exploder</span></p></li>
+              <li class="text"><p data-article-index="204"><span class="text pl">Ta Strona</span><span class="text en">This Site</span></p></li>
             </ul>
           </li>
-          <li calss="text"><p data-article-index="3">Kontakt</p></li>
+          <li calss="text"><p data-article-index="3"><span class="text pl">Kontakt</span><span class="text en">Contact</span></p></li>
         </ul>
       </nav>
       <div id="languageList" class="languageList">
         <ul>
-          <li><p>EN</p></li>
-          <li><p>PL</p></li>
+          <li><p class="english">EN</p></li>
+          <li><p class="polish">PL</p></li>
         </ul>
       </div>
       <div id="sidebarLinks" class="links">
-        <a class="facebook" href="#">f</a>
-        <a class="github" href="#">GitHub</a>
+        <a class="cv" href="download/Szopiera Bartosz Junior Front-End.pdf" target="_blank">CV</a>
+        <!-- <a class="facebook" href="https://www.facebook.com/bartosz.szopiera">f</a> -->
+        <a class="github" href="https://github.com/bart5">GitHub</a>
       </div>
     </div>
   </body>
