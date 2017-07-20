@@ -21,6 +21,12 @@ var styleSheet = document.querySelector('style').sheet;
   arrows[1].addEventListener('click', function(){
     navigate(1)
   });
+  // Language selection
+  var pl = document.querySelector('#languageList .polish')
+  var en = document.querySelector('#languageList .english')
+  pl.addEventListener('click', function(){setLanguage('pl')});
+  en.addEventListener('click', function(){setLanguage('en')});
+  //
 })();
 
 // =============================
@@ -42,6 +48,22 @@ var styleSheet = document.querySelector('style').sheet;
   var config = {attributes: true,};
   observer.observe(target, config);
 })();
+// =====================================
+// Show text elements according to language chosen
+
+function setLanguage(language) {
+  if (styleSheet.rules.length > 1) {
+    styleSheet.removeRule(1);
+  }
+  // var selector = '.text:not(.' + language + ')';
+  // var style = '{display: none}';
+  var selector = '.' + language;
+  var style = '{display: inline}';
+  var rule = selector + style;
+  styleSheet.insertRule(rule, 1);
+}
+setLanguage('pl');
+
 
 // =============================
 // When changing to the no-sidebar mode function
