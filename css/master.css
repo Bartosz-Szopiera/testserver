@@ -310,9 +310,7 @@ body {
     height: 60px; }
     body #header header {
       height: 100%;
-      justify-content: left;
-      flex-flow: row nowrap;
-      align-items: center; }
+      justify-content: left; }
   body #sidebar {
     font-size: 0.9em;
     order: 2;
@@ -361,7 +359,7 @@ body {
       position: absolute;
       top: 0px;
       right: 120px; }
-      body #sidebar #sidebarLinks > * {
+      body #sidebar #sidebarLinks a {
         margin-right: 15px;
         display: inline-block; } }
 @media (max-width: 50em) {
