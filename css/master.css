@@ -308,7 +308,7 @@ body {
   body #header {
     min-height: unset;
     height: 60px; }
-    body #header header {
+    body #header header:not(.forHigherSpecificity) {
       height: 100%;
       justify-content: left; }
   body #sidebar {
@@ -404,7 +404,7 @@ body {
 
   #arrows .left, #arrows .right {
     width: 30px;
-    height: 40px;
+    height: 80px;
     font-size: 4em; }
 
   .articleWrapper header {
@@ -451,8 +451,8 @@ body {
     body .articleWrapper article.projects section::before {
       padding-right: 10px; }
   body #arrows .left, body #arrows .right {
-    width: 20px;
-    height: 30px;
+    width: 30px;
+    height: 80px;
     font-size: 3em; } }
 @media (max-width: 23.4375em) {
   body > #sidebar {
@@ -491,7 +491,7 @@ body {
 
   #arrows .left, #arrows .right {
     width: 30px;
-    height: 40px;
+    height: 80px;
     font-size: 4em; }
 
   #sidebar > #sidebarNavigation > ul > li > ul > li p::before, #sidebar > #sidebarNavigation > ul > li > ul > li p::after {
