@@ -17,6 +17,9 @@ a {
   a:visited, a:link {
     color: inherit; }
 
+.en, .pl {
+  display: none; }
+
 article a:link, article a:visited, .articleWrapper .link a:link, .articleWrapper .link a:visited {
   color: blue; }
 

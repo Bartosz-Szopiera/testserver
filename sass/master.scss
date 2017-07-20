@@ -28,6 +28,10 @@ a {
   }
 }
 
+.en, .pl {
+  display: none;
+}
+
 article a, .articleWrapper .link a {
   &:link, &:visited {
     color:blue;
