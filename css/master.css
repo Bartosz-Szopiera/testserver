@@ -43,7 +43,7 @@ nav {
   height: 38px;
   transition: font-size 0.2s; }
   #sidebar li > p:hover, #startNavigation li > p:hover {
-    font-size: 1.25em; }
+    font-size: 1.2em; }
 
 body {
   position: relative;
@@ -82,16 +82,6 @@ body {
       #header header h1 span {
         font-size: 0.6em; }
 
-#headerNavigation {
-  display: inline-block;
-  margin-left: 10px; }
-  #headerNavigation ul li {
-    margin: 10px 5px;
-    display: inline-block; }
-    #headerNavigation ul li:not(:first-of-type)::before {
-      content: '/';
-      margin-right: 10px; }
-
 #main {
   position: relative;
   width: 85%;
@@ -117,7 +107,7 @@ body {
   z-index: 2;
   top: 50%;
   left: 0px;
-  right: 15px;
+  right: 18px;
   height: 10px;
   position: absolute;
   display: flex;
@@ -127,8 +117,9 @@ body {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
+    overflow: hidden;
     width: 40px;
-    height: 0px;
+    height: 60px;
     transform: translate(0px, -50%);
     font-size: 6em; }
     #arrows .left:hover, #arrows .right:hover {
@@ -166,16 +157,16 @@ body {
           background-repeat: no-repeat; }
         .articleWrapper nav#startNavigation li.about {
           background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/about.gif");
-          background-size: auto, 140px;
-          background-position: 54% 0%; }
+          background-size: auto, auto 80%;
+          background-position: 54% 50%; }
         .articleWrapper nav#startNavigation li.projects {
           background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/laptopAndCoffee.gif");
-          background-position: 58% 55%;
-          background-size: auto, 300px; }
+          background-size: auto, auto 80%;
+          background-position: 58% 55%; }
         .articleWrapper nav#startNavigation li.contact {
           background-image: repeating-linear-gradient(0deg, white 0px, white 1px, transparent 2px), url("../assets/contact2.gif");
-          background-position: 50% 55%;
-          background-size: auto, 160px; }
+          background-size: auto, auto 80%;
+          background-position: 50% 55%; }
     .articleWrapper nav#projectsNavigation li {
       height: 25%;
       font-size: 1.5em; }
@@ -234,19 +225,23 @@ body {
     color: green; }
   .articleWrapper article.projects section:nth-of-type(3)::before {
     color: red; }
-  .articleWrapper article.contact section {
-    font-size: 2.5em;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around; }
+  .articleWrapper article.contact {
+    overflow: hidden; }
+    .articleWrapper article.contact section {
+      font-size: 2.5em;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around; }
+      .articleWrapper article.contact section .email a {
+        user-select: initial; }
 
 #sidebar {
   overflow: hidden;
   background: repeating-linear-gradient(0deg, transparent 0px, transparent 1px, grey 2px);
   box-sizing: border-box;
   width: 15%;
-  padding-left: 30px;
+  padding-left: 20px;
   flex: 0 0 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -257,64 +252,11 @@ body {
     flex: 0 1 auto;
     margin: 10px 0px; }
 
-body.noSidebar #header, body.noSidebar #main, body.noSidebar #sidebar {
-  width: 100%; }
-body.noSidebar #header {
-  height: 60px; }
-  body.noSidebar #header header {
-    height: 100%;
-    justify-content: left;
-    flex-flow: row nowrap;
-    align-items: center; }
-body.noSidebar #sidebar {
-  order: 2;
-  padding: 0px;
-  display: block;
-  width: 100%;
-  height: 40px; }
-  body.noSidebar #sidebar > * {
-    width: auto;
-    height: auto;
-    margin: 15px; }
-  body.noSidebar #sidebar ul {
-    display: inline-flex;
-    flex-flow: row nowrap; }
-  body.noSidebar #sidebar #sidebarNavigation {
-    height: 40px;
-    float: left;
-    margin: 0px;
-    margin-left: 20px; }
-    body.noSidebar #sidebar #sidebarNavigation li {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      margin: 0px; }
-      body.noSidebar #sidebar #sidebarNavigation li p {
-        line-height: 0px;
-        height: 0px;
-        padding: 20px 0px;
-        vertical-align: baseline;
-        white-space: nowrap; }
-      body.noSidebar #sidebar #sidebarNavigation li:not(:first-of-type)::before {
-        content: '/ ';
-        display: inline;
-        vertical-align: top; }
-  body.noSidebar #sidebar #languageList {
-    position: fixed;
-    top: 0px;
-    right: 15px; }
-  body.noSidebar #sidebar #sidebarLinks {
-    position: absolute;
-    top: 0px;
-    right: 145px; }
-    body.noSidebar #sidebar #sidebarLinks > * {
-      display: inline-block; }
-
 #languageList {
   height: 5%;
   order: 1;
-  font-size: 1.35em; }
+  font-size: 1.35em;
+  font-weight: bold; }
   #languageList li {
     display: inline; }
     #languageList li p:hover {
@@ -344,11 +286,218 @@ body.noSidebar #sidebar {
     line-height: 0px;
     padding: 15px 0px;
     margin-bottom: 15px; }
+    #sidebarLinks a:hover {
+      color: blue; }
+  #sidebarLinks .cv {
+    font-weight: bold; }
   #sidebarLinks .facebook {
     font-weight: bold;
     background: black;
     color: white; }
   #sidebarLinks .github {
     font-weight: bold; }
+
+@media (max-width: 56.25em) {
+  body #header, body #main, body #sidebar {
+    width: 100%; }
+  body #header {
+    min-height: unset;
+    height: 60px; }
+    body #header header {
+      height: 100%;
+      justify-content: left;
+      flex-flow: row nowrap;
+      align-items: center; }
+  body #sidebar {
+    font-size: 0.9em;
+    order: 2;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    height: 40px; }
+    body #sidebar > * {
+      width: auto;
+      height: auto;
+      margin: 15px; }
+    body #sidebar ul {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      height: 100%; }
+    body #sidebar #sidebarNavigation {
+      height: 100%;
+      float: left;
+      margin: 0px;
+      padding-left: 20px;
+      padding-right: 35px;
+      width: 100%; }
+      body #sidebar #sidebarNavigation li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin: 0px; }
+        body #sidebar #sidebarNavigation li p {
+          line-height: 0px;
+          height: 0px;
+          padding: 20px 0px;
+          vertical-align: baseline;
+          white-space: nowrap; }
+    body #sidebar #languageList {
+      position: fixed;
+      top: 0px;
+      right: 15px; }
+      body #sidebar #languageList p {
+        height: 0px;
+        vertical-align: middle;
+        line-height: 0px;
+        padding: 15px 0px; }
+    body #sidebar #sidebarLinks {
+      position: absolute;
+      top: 0px;
+      right: 120px; }
+      body #sidebar #sidebarLinks > * {
+        margin-right: 15px;
+        display: inline-block; } }
+@media (max-width: 50em) {
+  #header h1 span {
+    display: none; } }
+@media (min-width: 43.76em) and (max-width: 56.25em) {
+  #sidebar ul li:not(:first-of-type)::before {
+    content: '/';
+    display: inline;
+    vertical-align: top; } }
+@media (max-width: 43.75em) {
+  #sidebar > #sidebarNavigation > ul > li:not(:first-of-type)::before {
+    content: '/ ';
+    display: inline;
+    vertical-align: top; }
+  #sidebar > #sidebarNavigation > ul > li:last-of-type {
+    width: 100%;
+    justify-content: flex-end; }
+  #sidebar > #sidebarNavigation > ul > li > ul > li {
+    padding-left: 0px; }
+    #sidebar > #sidebarNavigation > ul > li > ul > li p {
+      padding-left: 15px;
+      padding-right: 5px; }
+    #sidebar > #sidebarNavigation > ul > li > ul > li p::before, #sidebar > #sidebarNavigation > ul > li > ul > li p::after {
+      content: '..';
+      letter-spacing: 0.1em; }
+  #sidebar li ul p {
+    display: none; }
+
+  .articleWrapper article.contact section {
+    font-size: 2em; } }
+@media (max-width: 37.5em) {
+  body #header {
+    font-size: 0.7em;
+    height: 45px; }
+
+  body #sidebar > #sidebarLinks, body #sidebar > #languageList {
+    margin-top: 10px; }
+
+  .articleWrapper article.contact section {
+    font-size: 1.5em; }
+
+  #arrows .left, #arrows .right {
+    width: 30px;
+    height: 40px;
+    font-size: 4em; }
+
+  .articleWrapper header {
+    padding: 10px 10%; } }
+@media (max-width: 32.5em) {
+  body > #sidebar {
+    font-size: 0.8em;
+    height: 30px; }
+    body > #sidebar #sidebarNavigation {
+      height: 30px; }
+    body > #sidebar #sidebarLinks {
+      right: 100px; }
+  body > #header {
+    font-size: 0.6em; }
+  body .articleWrapper {
+    font-size: 0.9em; } }
+@media (max-width: 28.125em) {
+  body > #sidebar {
+    font-size: 0.7em;
+    height: 26px; }
+    body > #sidebar #sidebarNavigation {
+      height: 25px;
+      padding-left: 0px;
+      padding-right: 10px; }
+    body > #sidebar #sidebarLinks {
+      right: 70px;
+      margin-top: 5px; }
+      body > #sidebar #sidebarLinks .cv, body > #sidebar #sidebarLinks .github {
+        margin-right: 5px; }
+    body > #sidebar #languageList {
+      margin-top: 5px;
+      margin-right: 10px;
+      right: 0px; }
+  body > #header {
+    padding: 0px 10px;
+    font-size: 0.5em;
+    height: 35px; }
+  body .articleWrapper {
+    font-size: 0.7em; }
+    body .articleWrapper article.contact section {
+      font-size: 1.4em; }
+    body .articleWrapper header {
+      padding: 5px 10%; }
+    body .articleWrapper article.projects section::before {
+      padding-right: 10px; }
+  body #arrows .left, body #arrows .right {
+    width: 20px;
+    height: 30px;
+    font-size: 3em; } }
+@media (max-width: 23.4375em) {
+  body > #sidebar {
+    font-size: 0.6em;
+    height: 20px; }
+    body > #sidebar #sidebarNavigation {
+      height: 20px;
+      padding-left: 0px;
+      padding-right: 10px; }
+    body > #sidebar #sidebarLinks {
+      right: 55px;
+      margin-top: 0px; }
+      body > #sidebar #sidebarLinks .cv, body > #sidebar #sidebarLinks .github {
+        margin-right: 0px; }
+    body > #sidebar #languageList {
+      margin-top: 0px;
+      margin-right: 5px;
+      right: 0px; }
+  body > #header {
+    padding: 0px 10px;
+    font-size: 0.4em;
+    height: 25px; }
+  body .articleWrapper > header {
+    padding-left: 5%;
+    padding-right: 5%; }
+  body .articleWrapper .tableOfContents li {
+    display: inline; }
+    body .articleWrapper .tableOfContents li:not(:first-of-type) {
+      padding-left: 5px; }
+
+  .articleWrapper article.contact section {
+    font-size: 1.0em; }
+
+  body #sidebar #sidebarNavigation li {
+    padding-left: 5px; }
+
+  #arrows .left, #arrows .right {
+    width: 30px;
+    height: 40px;
+    font-size: 4em; }
+
+  #sidebar > #sidebarNavigation > ul > li > ul > li p::before, #sidebar > #sidebarNavigation > ul > li > ul > li p::after {
+    content: ''; } }
+@media (min-width: 56.25em) and (max-height: 34.375em) {
+  #sidebarNavigation ul li {
+    margin: 0; }
+
+  #sidebarLinks a {
+    margin-bottom: 5px; } }
 
 /*# sourceMappingURL=master.css.map */
