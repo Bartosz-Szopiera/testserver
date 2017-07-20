@@ -33,7 +33,7 @@ var styleSheet = document.querySelector('style').sheet;
     var artIndex = main.dataset.currentIndex;
     var selector = 'li p[data-article-index="' + artIndex + '"]';
     if (styleSheet.cssRules.length !== 0) styleSheet.deleteRule(0);
-    var style = '{font-size: 1.25em; color: black;text-decoration:underline}'
+    var style = '{font-size: 1.2em; color: black;text-decoration:underline;display:block !important;}'
     var rule = selector + style;
     styleSheet.insertRule(rule, 0);
   };
