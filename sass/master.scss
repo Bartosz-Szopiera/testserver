@@ -135,12 +135,17 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
+    transform: translate(0px,0px);
+    transition: transform;
+    will-change: transform;
     &>.articleWrapper{
       overflow: hidden;
       flex: 0 0 auto;
       height: 95%;
       width: 100%;
       transform: translate(0px,0px);
+      transition: transform;
+      will-change: transform;
     }
   }
 }

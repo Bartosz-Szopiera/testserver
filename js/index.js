@@ -104,13 +104,7 @@ var artList = function(){
 function navigate(direction, target) {
   if (target === undefined) target = this
 
-  if (sTiD !== 0) {
-    // window.clearTimeout(try_sTiD);
-    // return try_sTiD = setTimeout(function(){
-    //   navigate(direction, target)
-    // }, 200,direction,target);
-    return
-  }
+  if (sTiD !== 0) return
 
   direction = typeof(direction) === 'number' ? direction : 0;
   if (direction !== 0)  {
@@ -148,42 +142,34 @@ function navigate(direction, target) {
 
   var delay = 0.3;
 
-  cA.style.transition = 'transform';
-  nA.style.transition = 'transform';
+  var left = 'translate(-100%,0px)';
+  var center = 'translate(0%,0px)';
 
   if (direction === -1) {
-    cA.style.transitionDuration = '0s';
-    nA.style.transitionDuration = '0s';
-    cA.style.transform = 'translate(-100%,0px)';
-    nA.style.transform = 'translate(-100%,0px)';
+    // main.style.visibility = 'hidden';
+    main.style.transitionDuration = '0s';
+    main.style.transform = left;
+    // main.style.visibility = 'visible';
     sTiD = setTimeout(function(){
-      cA.style.transitionDuration = delay + 's';
-      nA.style.transitionDuration = delay + 's';
-      cA.style.transform = 'translate(0%,0px)';
-      nA.style.transform = 'translate(0%,0px)';
+      main.style.transitionDuration = delay + 's';
+      main.style.transform = center;
       sTiD = setTimeout(function(){
-        cA.style.transitionDuration = '0s';
-        nA.style.transitionDuration = '0s';
         cA.classList.add('hidden');
         setTimeout(function(){sTiD = 0;},50);
       }, delay*1000);
-    });
+    },20);
   }
   else {
     sTiD = setTimeout(function(){
-      cA.style.transitionDuration = delay + 's';
-      nA.style.transitionDuration = delay + 's';
-      cA.style.transform = 'translate(-100%,0px)';
-      nA.style.transform = 'translate(-100%,0px)';
+      main.style.transitionDuration = delay + 's';
+      main.style.transform = left;
       sTiD = setTimeout(function(){
-        cA.style.transitionDuration = '0s';
-        nA.style.transitionDuration = '0s';
-        cA.style.transform = 'translate(0%,0px)';
-        nA.style.transform = 'translate(0%,0px)';
+        main.style.transitionDuration = '0s';
+        main.style.transform = center;
         cA.classList.add('hidden');
         setTimeout(function(){sTiD = 0;},50);
       },delay*1000);
-    });
+    },20);
   }
 
   currentIndex = newIndex;
