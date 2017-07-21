@@ -52,8 +52,8 @@ var styleSheet = document.querySelector('style').sheet;
 // Show text elements according to language chosen
 
 function setLanguage(language) {
-  if (styleSheet.rules.length > 1) {
-    styleSheet.removeRule(1);
+  if (styleSheet.cssRules.length > 1) {
+    styleSheet.deleteRule(1);
   }
   // var selector = '.text:not(.' + language + ')';
   // var style = '{display: none}';
