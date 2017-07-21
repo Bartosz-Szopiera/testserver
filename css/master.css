@@ -73,17 +73,18 @@ body {
   height: 10%;
   order: 1; }
   #header header {
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
     position: relative;
-    width: 100%; }
-    #header header:not(.fixedHeader) {
-      justify-content: center; }
+    height: 100%;
+    width: 100%;
+    text-align: center; }
     #header header h1 {
       font-size: 2em;
-      margin: 0px; }
+      margin: 0px;
+      position: absolute;
+      line-height: 0px;
+      top: 50%;
+      left: 0px;
+      right: 0px; }
       #header header h1 span {
         font-size: 0.6em; }
 
@@ -311,7 +312,7 @@ body {
     height: 60px; }
     body #header header {
       height: 100%;
-      justify-content: left; }
+      text-align: left; }
   body #sidebar {
     font-size: 0.9em;
     order: 2;

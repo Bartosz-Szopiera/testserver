@@ -101,18 +101,18 @@ body {
   height: 10%;
   order: 1;
   & header {
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    &:not(.fixedHeader) {
-      justify-content: center;
-    }
     position: relative;
+    height: 100%;
     width: 100%;
+    text-align: center;
     & h1 {
       font-size: 2em;
       margin: 0px;
+      position: absolute;
+      line-height: 0px;
+      top: 50%;
+      left: 0px;
+      right: 0px;
       & span {
         font-size: 0.6em;
       }
@@ -426,7 +426,7 @@ body {
       height: 60px;
       & header {
         height: 100%;
-        justify-content: left;
+        text-align: left;
       }
     }
     & #sidebar {

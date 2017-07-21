@@ -65,17 +65,6 @@ function setLanguage(language) {
 setLanguage('pl');
 
 // =============================
-// Add proper justify-content on
-// mobile chrome
-
-(function flexboxFix() {
-  if (window.innerWidth < 900) {
-    var header = document.querySelector('#header header');
-    header.classList.add('fixedHeader');
-  }
-})();
-
-// =============================
 // When changing to the no-sidebar mode function
 // is reading calculated widths of <li> elements
 // and sets them as fixed.
