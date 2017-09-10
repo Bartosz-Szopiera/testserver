@@ -58,8 +58,8 @@
                   <p><span class="text pl">Miałem okazję zetknąć się z programowaniem w trakcie studiów w ramach zajęć z Matlaba (pochodne C++), a później przy okazji zainteresowania rynkiem forex i skryptowaniem w terminalu handlowym (Metatrader - MQL4).</span><span class="text en">My interest in programming started from course in Matlab (which utilizes scripts for data analyzis and visualization - derivative of C++) and by the way of the interest in foreign-exchange market trading (popular terminal comes with IDE for auto-trading scripts).</span></p>
                   <p><span class="text pl">W krótkim czasie po studiach zdecydowałem się zmienić branże budowlaną na coś innego, i niebawem postanowiłem skupić się na web-developmencie.</span><span class="text en">In short time after graduation I decided to transition from construction industry to something else. Eventually I made-up my mind to pursue web-development.</span></p>
                   <p><span class="text pl">Spędziłem okołu rok na samodzielnej nauce od zera. Praktyczne efekty to kilka samodzielnych projektów udostępnionych na tej stronie i krótko opisanych.</span><span class="text en">I have spent about a year on self-learning from zero. Practical results of my work are a couple projects made available here and briefly described.</span></p>
-                  <p><span class="text pl">W czasie mojej nauki w pewnym stopniu (najlepiej widocznym w projektach) poznałem HTML, CSS, SASS, JavaScript, PHP i SQL. </span><span class="text en">So far I learnt to some extent (best portrayed by projects) HTML, CSS, SASS, JavaScript, PHP and SQL.</span></p>
-                  <p><span class="text pl">Aktualnie staram rozwijać się w kierunku lepszego rozumienia JavaScripta i poznawania jego frameworków/ekosystemów (React, Angular, Node.js).</span><span class="text en">Currently I focus my efforts on better understanding of JavaScript and learning its' frameworks/ecosystems (Angular, Node.js).</span></p>
+                  <p><span class="text pl">W czasie mojej nauki w pewnym stopniu (najlepiej widocznym w projektach) poznałem HTML, CSS, SASS, JavaScript oraz podstawy PHP, SQL i Vue.js. </span><span class="text en">So far I learnt to some extent (best portrayed by projects) HTML, CSS, SASS, JavaScript and basic of PHP, SQL and Vue.js.</span></p>
+                  <p><span class="text pl">Aktualnie staram rozwijać się w kierunku lepszego rozumienia JavaScripta i poznawania jego frameworków/ekosystemów (Vue.js, Node.js) oraz narzędzi (webpack).</span><span class="text en">Currently I focus my efforts on better understanding of JavaScript and learning its' frameworks/ecosystems (Vue.js, Node.js) and tools (webpack).</span></p>
                   <p><span class="text pl">Liczę, że przy okazji pracy nad zadaniami z prawdziwego zdarzenia i korzystając z wiedzy bardziej doświadczonych osób jestem w stanie dalej rozwijać swoje kompetencje i stać się lepszym developerem.</span><span class="text en">I think that with an opportunity to work on real projects and with an advice of a more experienced people I'm able to improve my skills and become better developer.</span></p>
                 </div>
               </div>
@@ -77,6 +77,7 @@
               <li class="projects"><p data-article-index="202"><span class="text pl">Unity3D</span><span class="text en">Unity3D</span></p></li>
               <li class="contact"><p data-article-index="203"><span class="text pl">Exploder</span><span class="text en">Exploder</span></p></li>
               <li class="contact"><p data-article-index="204"><span class="text pl">Ta Strona</span><span class="text en">This Site</span></p></li>
+              <li class="contact"><p data-article-index="205"><span class="text pl">Vue app</span><span class="text en">Vue app</span></p></li>
             </ul>
           </nav>
         </div>
@@ -287,6 +288,60 @@
           <footer>
           </footer>
         </div>
+        <div class="articleWrapper projects hidden" data-article-index="205">
+          <!-- BASIC CONTENT INFO -->
+          <header>
+            <!-- <div class="subject text"></div> -->
+            <div class="tableOfContents">
+              <ul>
+                <li><a class="text" href="#projects-5-1"><span class="text pl">Opis</span><span class="text en">Intro</span></a></li>
+                <li><a class="text" href="#projects-5-2"><span class="text pl">Udane</span><span class="text en">Wins</span></a></li>
+                <li><a class="text" href="#projects-5-3"><span class="text pl">Nieudane</span><span class="text en">Fails</span></a></li>
+              </ul>
+            </div>
+            <div class="link">
+              <a href="http://testserver.pl/monterail-test">http://testserver.pl/monterail-test</a>
+            </div>
+          </header>
+          <!-- PRIMARY CONTENT -->
+          <article class="projects">
+            <section id="projects-5-1">
+              <div class="content">
+                <div class="text">
+                  <p><span class="text pl">Jest to mały fragment aplikacji społecznościowej powstały jako zadanie rektrutacyjne według dostarczonego projektu graficznego oraz listy funkcjonalności do stworzenia. To moje pierwsze podejście do Vue.js i frameworków w ogóle.</span><span class="text en">It is a small fragment of social-network/Q&A app, created as a task in recruitment process according to provided graphical design and list of functionalities. It is my first apporach to Vue.js and frameworks in general.</span></p>
+                </div>
+              </div>
+            </section>
+            <section id="projects-5-2">
+              <div class="content">
+                <div class="text">
+                  <ul>
+                    <li><span class="text pl">Wygląd jest zgodny z projektem.</span><span class="text en">Views are as desgined.</span></li>
+                    <li><span class="text pl">Widoki są responsywne.</span><span class="text en">Outline is responsive.</span></li>
+                    <li><span class="text pl">Dane z pytaniami są pobierane przez AJAX z Firebase.</span><span class="text en">Data with questions is downloaded from Firebase via AJAX.</span></li>
+                    <li><span class="text pl">Część informacji komponentów jest dynamiczna i zależna od pobranych danych a część jest statyczna.</span><span class="text en">Part of components information is filled dynamically based on dowloaded data and part is static.</span></li>
+                    <li><span class="text pl">Działa funkcja sortowania pytań oraz wyszukiwania w oparciu o tytuł.</span><span class="text en">There is working sorting and searching function.</span></li>
+                    <li><span class="text pl">Działa votowanie pytań, odpowiedzi i komentarzy ze zmianą danych na serwerze.</span><span class="text en">There is implemented voting of questions, answers and comments which updates data on the server.</span></li>
+                    <li><span class="text pl">Działa routing którego ścieżkami są komponenty dwóch głównych widoków. Jedynym komponentem niezwiązanym routerem jest modal użytkownika.</span><span class="text en">Routing is working with paths to the two main components of the two main views. Only component outside of router is user profile modal.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section id="projects-5-3">
+              <div class="content">
+                <div class="text">
+                  <ul>
+                    <li><span class="text pl">Kod stylu jest zbyt długi na zwykły CSS w którym został napisany.</span><span class="text en">Styl code is too long for plain CSS in which it is created.</span></li>
+                    <li><span class="text pl">Funkcja sterująca transformacją headera w trakcie scrollu wydaje się być nie warta dwóch listenerów na obiekcie window.</span><span class="text en">Function controlling header transformation on the scroll event seems not worth the two listeners on the window object.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </article>
+          <!-- SECONDARY CONTENT -->
+          <footer>
+          </footer>
+        </div>
         <!--===== CONTACT FORM =====  -->
         <div id="contact" class="articleWrapper hidden" data-article-index="3">
           <article class="contact">
@@ -346,6 +401,7 @@
               <li class="text"><p data-article-index="202"><span class="text pl">Unity</span><span class="text en">Unity</span></p></li>
               <li class="text"><p data-article-index="203"><span class="text pl">Exploder</span><span class="text en">Exploder</span></p></li>
               <li class="text"><p data-article-index="204"><span class="text pl">Ta Strona</span><span class="text en">This Site</span></p></li>
+              <li class="text"><p data-article-index="205"><span class="text pl">Vue App</span><span class="text en">This Site</span></p></li>
             </ul>
           </li>
           <li calss="text"><p data-article-index="3"><span class="text pl">Kontakt</span><span class="text en">Contact</span></p></li>

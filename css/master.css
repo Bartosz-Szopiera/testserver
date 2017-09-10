@@ -183,7 +183,7 @@ body {
           background-size: auto, auto 80%;
           background-position: 50% 55%; }
     .articleWrapper nav#projectsNavigation li {
-      height: 25%;
+      height: 20%;
       font-size: 1.5em; }
 
 .articleWrapper header {
@@ -376,12 +376,10 @@ body {
 @media (max-width: 50em) {
   #header h1 span {
     display: none; } }
-@media (min-width: 43.76em) and (max-width: 56.25em) {
-  #sidebar ul li:not(:first-of-type)::before {
-    content: '/';
-    display: inline;
-    vertical-align: top; } }
-@media (max-width: 43.75em) {
+@media (max-width: 50em) {
+  #header h1 span {
+    display: none; }
+
   #sidebar > #sidebarNavigation > ul > li:not(:first-of-type)::before {
     content: '/ ';
     display: inline;
@@ -402,6 +400,11 @@ body {
 
   .articleWrapper article.contact section {
     font-size: 2em; } }
+@media (min-width: 50em) and (max-width: 56.25em) {
+  #sidebar ul li:not(:first-of-type)::before {
+    content: '/';
+    display: inline;
+    vertical-align: top; } }
 @media (max-width: 37.5em) {
   body #header {
     font-size: 0.7em;
